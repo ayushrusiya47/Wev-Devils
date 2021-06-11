@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    color:#FFFFFD;
+}
+a{
+    text-decoration: none;
+}
+.nav-bar{
+    position: absolute;
+     z-index: 3;
+     width:100%;
+     display: flex;
+     justify-content: flex-end;
+   
+}
+ul{
+    list-style-type:none;
+}
+.list{
+    display:flex;
+    font-size: 20px;
+    font-weight: 900;
+  
+}
+.list li{
+    padding-left:20px;
+    padding-right: 20px;
+    padding-top:10px;
+}
+.main-page{
+    position: relative;
+    width:100%;
+    height: 100vh;
+    background-color:#0366F9;
+    overflow: hidden;
+}
+.drop-down{
+    width:40px;
+    height: 40px;
+}
+.container{
+    position: relative;
+    width:80vw;
+    top:15%;
+    left:5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.heading
+{  
+    font-family: 'Roboto Mono';
+    width:50vw;
+    font-size:65px;
+    color:#FFFFFD;
+    font-weight: bolder;
+}
+.date{
+    padding:5vh;
+}
+.logo {
+position: relative;
+   width:500px;
+   height: 500px;
+}
+.rickmortysvg
+{
+  position: absolute;
+    width:400px;
+    height: 400px;
+    z-index: 2;
+    
+}
+ .splash{
+position: absolute;
+   transform: translate(-40px,-37px) scale(1.7);
+   filter: blur(3px);
+
+    z-index: 1;
+}
+ h2{
+     border-bottom:2px solid #000;
+     padding-bottom: 10px;
+     width:fit-content;
+     
+ }
+ .btn-events{
+     background-color:black;
+     border-radius:10px ;
+     width:200px;
+     height: 50px;
+     font-size: 30px;
+     font-weight: bold;
+     margin-top: 40px;
+      border: none;
+     text-align: center;
+ }
+ 
+ 
+ 
