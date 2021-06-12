@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    
+}
+.wrap{
+    width: 100%;
+    height:fit-content;
+    overflow: auto;
+    display: flex;
+}
+.left-container
+{  float: left;
+    background-color: #000000;
+    width:55%;
+    /* height: fit-content; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+ 
+
+}
+.form{
+    padding-top:20px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+ .instruction hr{
+     margin-top: 10px;
+    margin-left:8% ;
+    width: 80%;
+     margin-bottom:30px ;
+ }
+#email , #password{
+   min-width: 25vw;
+    height: 3.0vw;
+    border-radius: 10px;
+    border:none;
+    margin-bottom: 18px;
+    color: #000000;
+    outline: none;
+    font-size: 16px;
+    padding-left:15px;
+    
+}
+::placeholder{
+    color:#272626;
+    font-weight: bold;
+    text-align: start;
+}
+#btn{
+    width:160px;
+    height: 45px;
+    background-color:#00FF57;
+    border:none ;
+    border-radius: 55px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bolder;
+  text-align: center;
+
+}
+
+.rickandmortysvg{
+    width:300px;
+    height: 300px;
+}
+.right-container{
+    float: right;
+    background-color: #00FF57;
+    width:45%;
+    background-image:url("../New folder/HAM-BOT-18-web-removebg-preview.svg") ;
+   background-size: cover;
+   object-fit:contain;
+   background-position: 40% 0;
+}
+ 
+.has-account{
+   margin-top: 20px;
+    color:white;
+    font-size: 15px;
+    
+
+}
+.has-account{
+    position: relative;
+    padding-bottom: 20px;
+    bottom:0;
+}
+.has-account span a{
+text-decoration: none;
+color:rgb(0, 247, 82);
+}
