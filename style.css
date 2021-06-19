@@ -7,6 +7,24 @@
     font-family: 'Roboto Mono';
     color:#FFFFFD;
 }
+
+body,html{
+    overflow-x: hidden;
+    background-color: rgb(6, 122, 255);
+  
+    background-image: url("https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;   
+    transition: background-image 1s;
+     display: flex;
+     flex-direction: column;
+     scroll-behavior: smooth;
+    
+}
+
+   
+
 a{
     text-decoration: none;
 }
@@ -16,8 +34,10 @@ a{
      width:100%;
      display: flex;
      justify-content: flex-end;
+    
    
 }
+ 
 ul{
     list-style-type:none;
 }
@@ -25,29 +45,48 @@ ul{
     display:flex;
     font-size: 20px;
     font-weight: 900;
+    flex-wrap: wrap;
   
 }
 .list li{
     padding-left:20px;
     padding-right: 20px;
     padding-top:10px;
-}
+}  
+ 
 .main-page{
+    
     position: relative;
     width:100%;
-    height: 100vh;
-    background-color:#0366F9;
-    overflow: hidden;
+   min-height: 100vh;
+  opacity:0;
+  background: -webkit-linear-gradient(rgba(127, 127, 127, 0),
+  rgba(0, 0, 0, 0) 45%,
+  rgba(0, 0, 0, 1));
+    display: flex;
+    justify-content: center;
+    
+animation: reveal 4s forwards;
+animation-delay: 1s;
+}
+@keyframes reveal{
+    from{
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+    }
 }
 .drop-down{
     width:40px;
     height: 40px;
 }
-.container{
+.container{ 
     position: relative;
-    width:80vw;
-    top:15%;
-    left:5%;
+    width:90%;
+    margin-top:5%;
+    
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,6 +94,9 @@ ul{
 .heading
 {  
     font-family: 'Roboto Mono';
+    position: relative;
+    margin-top: 10%;
+    z-index: 3;
     width:50vw;
     font-size:65px;
     color:#FFFFFD;
@@ -65,23 +107,28 @@ ul{
 }
 .logo {
 position: relative;
-   width:500px;
-   height: 500px;
+
+   width:450px;
+   height: 450px;
+   
 }
+
 .rickmortysvg
 {
   position: absolute;
-    width:400px;
-    height: 400px;
+  margin-top:0;
+    width:30em;
+    height: 30em;
+    transform: scale(0);
     z-index: 2;
-    
+    animation: pop 1s forwards;
+    animation-delay: 4s;
 }
- .splash{
-position: absolute;
-   transform: translate(-40px,-37px) scale(1.7);
-   filter: blur(3px);
-
-    z-index: 1;
+@keyframes pop {
+    from{
+        transform: scale(0);
+    }
+    to {transform: scale(1.5);}
 }
  h2{
      border-bottom:2px solid #000;
@@ -100,6 +147,166 @@ position: absolute;
       border: none;
      text-align: center;
  }
- 
- 
+ .btn-events:hover{
+    background-color:white;
+    color:black;
+    border-radius: 20px;
+ }
+
+ footer{
+     padding-top:5em ;
+     background-color: #000;
+     position: relative;
+     z-index:11;
+     /* padding-bottom:20em; */
+
+ }
+ .school{
+     background-image: url("https://www.noticebard.com/wp-content/uploads/2019/10/iitm-gwalior.png");
+     background-size: contain;
+     background-repeat: no-repeat;
+     min-width:15em;
+     min-height: 15em;
+ }
+ .footer{
+     position: relative;
+     left:2em;
+     display: flex;
+     justify-content: space-around;
+ }
+ .team{
+    left:2em;
+     position: relative;
+     top:1em;
+     display: flex;
+     padding-bottom: 1.5em;
+ }
+ .team img{
+    margin-left: 10px; width:4em;
+     height: 4em;
+border-radius: 50%;
+ }
+
+ .team div{
+     margin-left:3em;
+ }
+
+
+
+ .about{
+ margin-top: 1em;
+ }
+ .about h2{
+     text-align: center;
+     width:100%;
+ }
+ .about p
+ {
+width:25em;
+ }
+ .team img:hover{
+    border:solid 6px rgb(1, 255, 242);
+    
+ }
+ .team img:hover:nth-child(1){
+    border:solid 6px #39FF14;
+ } 
+ .team img:hover:nth-child(3)
+ {
+    border:solid 6px #FFD300;
+ }
+ .contact{
+     margin-top: 1em;
+     
+ }
+ .contact li{
+     line-height:1.5em;
+ }
+ .footer{
+     display: flex;
+     flex-direction: row;
+
+ }
+ .copyrights h3{
+     margin-top:3em;
+     text-align: center;
+     color:grey;
+     padding-bottom:1em;
+ }
+
+  
+ @media (max-width: 800px) {
+
+    .container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .adjust{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .heading{
+        position: relative;
+        font-size:2.7em;
+        margin-top: 0%;
+        
+       width: 7em;
+       z-index: 10;
+       align-self: center;
+       text-align: center;
+    }
+    .date{
+        width:100%;
+        font-size:0.7em;
+        text-align: center;
+    }
+    .logo {
+        position: relative;
+           width:25em;
+           height: 25em;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+    .rickmortysvg
+    {
+        position: absolute;
+        width:25em;
+        height: 25em;
+        transform: scale(0);
+        z-index: 2;
+        animation: pop 1s forwards ;
+        animation-delay: 3s;
+    }
+    @keyframes pop {
+        from{
+            transform: scale(0);
+        }
+        to {transform: scale(1.2);}
+    }
+   .footer{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.team{
+    display: flex;
+   flex-direction: column;
+}
+.about p{
+    text-align: center;
+    font-size: 15px;
+    width:20em ;
+}
+.copyrights h3{
+    font-size: 12px;
+}
+.footer{
+    left:0;
+    
+}
+     
+ }
  
