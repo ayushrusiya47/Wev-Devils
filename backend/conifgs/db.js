@@ -1,4 +1,4 @@
-const { Client } = require('pg')
-
-const client = new Client(`postgres://fhpcrzhr:ukB1mYKGS1SVX2kBbBVYtHALnKbtIzlp@john.db.elephantsql.com/fhpcrzhr`);
+//DATABASE CONFIGURATIONS
+const { Client } = require("pg");
+const client = new Client(process.env.DB_URL);
 module.exports = client;

@@ -1,6 +1,12 @@
-const express = require('express');
-const { signUp, signIn } = require('../contollers/auth');
+// AUTHENTICATION ROUTES
+
+const express = require("express");
 const router = express.Router();
-router.post("/signup", signUp);
+
+const { signUp, signIn } = require("../contollers/auth"); //Getting functions
+
+//Requests
+router.post("/signup", signUp); //Bug in if event is cancelled, -- TO BE FIXED
 router.post("/signin", signIn);
+
 module.exports = router;
