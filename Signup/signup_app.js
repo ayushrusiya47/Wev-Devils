@@ -1,17 +1,3 @@
-// "use strict"
-const body = document.querySelector('body');
-console.log(body);
-const Url = "http://localhost:8000"
-const signUpForm = document.querySelector(".form");
-window.addEventListener("resize", resize_blur);
-function resize_blur() {
-    body.style.filter = "blur(4px)";
-    setTimeout(restore, 200);
-
-}
-function restore() {
-    body.style.filter = "blur(0px)";
-}
 "use strict"
 const body=document.querySelector('body');
 console.log(body);
@@ -55,6 +41,7 @@ document.querySelector(".menu").addEventListener("click",()=>{
     document.querySelector(".overlay").style.display="none";
 });
 
+const Url = "http://localhost:8000"
 signUpForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = document.querySelector('#email').value
