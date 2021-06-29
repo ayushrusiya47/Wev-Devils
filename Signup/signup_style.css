@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 *{
     padding:0;
     margin: 0;
@@ -7,13 +7,69 @@
     font-family: 'Roboto Mono';
     
 }
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
 body{
     overflow-x: hidden;
+    background-color: #000;
+}
+.nav-bar{
+    position: absolute;
+     z-index: 3;
+     width:100%;
+     display: flex;
+     justify-content: flex-end;
+    
+   
+}
+ul{
+    list-style-type:none;
+}
+.list{
+    display:flex;
+    font-size: 20px;
+    font-weight: 900;
+    flex-wrap: wrap;
+  
+}
+.list li{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top:0.8em;
+    padding-bottom: 0;
+  
+}  
+.location{
+   
+    background-color: white;
+    padding: 0.5em 1.2em  0.5em 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition:border-bottom  1s ease ;
+    border-bottom :none;
+
+
+}
+.location:hover{
+
+ background-image:url("https://media0.giphy.com/media/2Et7fcUhkRI7C/giphy.gif?cid=790b76115a679418fa6a47a1b2dea1385b55a32871320bb8&rid=giphy.gif&ct=g");
+  background-size:cover; 
 }
 .wrap{
     width: 100vw;
-    min-height: 100vh;
-   overflow: auto;
+    min-height: 100vh; 
     display: flex;
     
 }
@@ -22,21 +78,52 @@ body{
     background-color: black;
     float: left;
     background-image: url("https://atik-gohel.github.io/ui-1.atik-gohel.github.io/assets/images/blue.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    animation: bg 3s forwards;
+}
+@keyframes bg{
+    from{ width:100%;
+        background-size: 700%;
+    }
+    to{
+        width:55%;
+        background-size:150%;
+    }
 }
 .form{
-    padding-top:20px ;
+   margin-top:3em ;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    opacity: 0;
+    cursor: none;
+    
+    animation: restore 2s cubic-bezier(.7,.34,1,.55) forwards;
+    animation-delay:3s ;
 }
+@keyframes restore {
+    from{
+        opacity: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{ 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+        cursor: pointer;
+
+    }
+}
+
 #email , #password, #confirm-password,#username{
     min-width: 25vw;
-     height: 3.0vw;
+     min-height: 2.5em;
      border-radius: 10px;
      border:none;
      margin-bottom: 18px;
@@ -48,7 +135,7 @@ body{
  }
  label{
     color:white;
-    width:30vw;
+    min-width:4em;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -73,25 +160,28 @@ label span a{
   color: #000000;
   font-size: 15px;
   font-weight: bolder;
-  text-align: center;
+  
  
 
 }
 #btn:hover
 {
     cursor: pointer;
-  color: #000;
+  color: #ffff;
   background-repeat: repeat-x;
  
   background-position: 100% 50%;
   transition: background-position 3s ease;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjMwMXB4IiBoZWlnaHQ9IjEzN3B4IiB2aWV3Qm94PSIwIDAgMzAxIDEzNyIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDEuMiAoMzUzOTcpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlBhdGggMjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwYXRoIGQ9Ik0wLjUwMTk1MzEyNSw4Ljk2Mjg5MDYyIEwwLjUwMTk1MzEyNSwxMzYuMjk4MDIxIEwzMDAuMzYxNjYsMTM2LjI5ODAyMSBMMzAwLjM2MTY2LDcuMjEyNDYyNjcgQzMwMC4zNjE2Niw3LjIxMjQ2MjY3IDI5MC40NTExNzIsMTIuMDY4MzU5NCAyNzguMTg1NTQ3LDEyLjA2ODM1OTQgQzI2NS45MTk5MjIsMTIuMDY4MzU5NCAyNDcuMDMzMjAzLDAuMTA3NDIxODc1IDE5OS44MTI1LDAuMTA3NDIxODc1IEMxNTIuNTkxNzk3LDAuMTA3NDIxODc1IDEyNy42NzE4NzUsOS41MDU4NTkzNyAxMDEuNDMxNjQxLDkuNTA1ODU5MzcgQzc1LjE5MTQwNjIsOS41MDU4NTkzNyA1NS4xNjAxNTYyLDAuOTU1MDc4MTI1IDQxLjYzMDg1OTQsMC45NTUwNzgxMjUgQzI4LjEwMTU2MjUsMC45NTUwNzgxMjUgMC41MDE5NTMxMjUsOC45NjI4OTA2MiAwLjUwMTk1MzEyNSw4Ljk2Mjg5MDYyIFoiIGlkPSJQYXRoLTIiIGZpbGw9IiNGQzI5OTUiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+');
+  background-image: url('https://i.gifer.com/BlKh.gif');
 }
  
 .has-account{
 color:white;
 margin-top: 1em;
 margin-bottom: 1em;
+animation: restore 2s forwards;
+    animation-delay:3s ;
+    opacity: 0;
 }
 .has-account span a{
     text-decoration: none;
@@ -102,15 +192,164 @@ margin-bottom: 1em;
 .rickandmortysvg{
     width:220px;
     height: 220px;
-
+    animation: restore 2s ease-in-out forwards;
+    animation-delay:3s ;
+    opacity: 0;
+    transform: scale(1.2);
 }
 .right-container{
-    width:45vw;
+    width:0;
     background-color:yellowgreen;
     float: right;
     background-image: url("../New folder/pexels-ingo-joseph-1755087.jpg");
     background-size: cover;
     object-fit:cover;
     background-position: 60% 10%;
+    animation:exp 3s forwards;
+    animation-delay:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
+.right-container h1{
+    font-size: 4em;
+    font-weight: 500;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    animation: clipPath 2s ease-in-out forwards ;
+    background-color: #000;
+    animation-delay: 3s;
+    clip-path: polygon(52% 0, 52% 0, 52% 100%, 52% 100%);
+   
+ }
+ @keyframes clipPath {
+     from{
+        clip-path: polygon(52% 0, 52% 0, 52% 100%, 52% 100%);
+     }
+     to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+     
+ }
+@keyframes exp {
+    from{
+        width:0vw;
+        
+    }
+    to {
+        width:45vw;
+    }
+}
+
+.overlay{
+    width:100vw;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 100;
+    display:none;
+    -webkit-backdrop-filter: blur(6.3px);
+    backdrop-filter: blur(6.3px);
+    background-color: rgba(0,191,255, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.menu{
+    width:100vw;
+    min-height: 105vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block:hover{
+    background-image: url("https://giphy.com/gifs/no-dripping-2Et7fcUhkRI7C");
+    background-size: contain;
+}
+
+.btnFillup {
+    display: inline-block;
+    padding: 16px;
+    overflow: hidden;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    background-position: 0 -100%;
+    background-repeat: repeat-x;
+    transition: background-position 1.5s ease;
+  }
+  .btnFillup:hover {
+    background-position: 100% 50%;
+    border-color: rgb(0, 0, 0);
+    color: white;
+  }
+  .liquidbg {
+    background-image: url('https://cdn.dribbble.com/users/1463692/screenshots/5486307/drips_v01.gif');
+    background-size: cover;
+  }
+ 
+  .blocks
+  {
+      width:10em;
+      background-color: rgb(0, 0, 0);
+      color:rgb(255, 253, 253);
+      font-size: 1.2em;
+      font-weight: 500;
+      font-family: 'Staatliches', cursive;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 1em;
+      padding:0.5em;
+      border-radius: 13px;
+     cursor: pointer;
+  }
+
+@media (max-width: 800px) {
+    body{
+        overflow-x: hidden;
+    }
+         .wrap {
+           flex-direction: column;
+         }
+         .left-container{
+             width:100vw;
+             min-height: 100vh;
+             background-size: cover;
+             background-repeat: none;
+             background-position: left;
+             animation: oo 2s forwards;
+         }
+         @keyframes oo {
+             from{
+                 background-size: 800%;
+             }
+             to{
+                 background-size: 150%;
+             }
+         }
+         .left-container{
+             min-height: 100vh;
+         }
+         .right-container{
+             display: none;
+             animation: none;
+         }
+      #username::placeholder{
+          font-size: 14px;
+      }
+      .has-account{
+          width:10em;
+          text-align: center;
+      }
+      .block{
+          display: none;
+      }
+      .blocks{
+          width:28vh;
+      }
+       }
