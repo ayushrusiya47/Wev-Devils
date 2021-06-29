@@ -11,6 +11,7 @@ function resize_blur() {
 function restore() {
     body.style.filter = "blur(0px)";
 }
+document.querySelector(".homie").addEventListener("click",()=>{location.href="../index.html"});
 document.querySelector(".sign-up-has-account").addEventListener("click",()=>{
  location.href="../Signup/signup.html";
 });
