@@ -12,6 +12,49 @@ function resize_blur() {
 function restore() {
     body.style.filter = "blur(0px)";
 }
+"use strict"
+const body=document.querySelector('body');
+console.log(body);
+window.addEventListener("resize",resize_blur);
+function resize_blur()
+{
+    body.style.filter="blur(4px)";
+    setTimeout(restore,200);
+  
+}
+function restore(){
+    body.style.filter="blur(0px)";
+}
+
+const home=document.querySelector(".home");
+home.addEventListener("click",()=>{
+location.href="../index.html";
+});
+document.querySelector(".homie").addEventListener("click",()=>{
+    location.href="../index.html";
+})
+const sign_inbtn=document.querySelector(".sign-in");
+// console.log(sign_inbtn);
+sign_inbtn.addEventListener("click",function(){
+    location.href="../SignIn/signIn.html"
+});
+document.querySelector(".signin").addEventListener("click",function(){
+    location.href="../SignIn/signIn.html"
+});
+
+document.querySelector(".profile").addEventListener("click",()=>{
+    location.href="../user_profile/userprofile.html";
+   });
+   document.querySelector(".user-profile").addEventListener("click",()=>{
+    location.href="../user_profile/userprofile.html";
+   });
+document.querySelector(".dropdown").addEventListener("click",()=>{
+    document.querySelector(".overlay").style.display="block";
+});
+document.querySelector(".menu").addEventListener("click",()=>{
+    document.querySelector(".overlay").style.display="none";
+});
+
 signUpForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = document.querySelector('#email').value
