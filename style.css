@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 *{
     padding:0;
     margin: 0;
@@ -23,24 +23,41 @@
 }
 
 body,html{
-    overflow-x: hidden;
+  overflow-x: hidden;
     background-color: rgb(6, 122, 255);
-  
+    /* "https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif" */
     background-image: url("https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;   
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
     transition: background-image 1s;
      display: flex;
      flex-direction: column;
      scroll-behavior: smooth;
+     
     
 }
 
-   
+   span{
+       background-color: black;
+       font-size: 1em;
+    font-weight: 300;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+       
+   }
 
-a{
+.location{
+   
+    background-color: black;
+    padding: 0.5em 1.2em  0.5em 1.2em;
+    border-radius: 10px;
     text-decoration: none;
+    font-size: 0.8em;
+    transition:border-bottom  1s ease ;
+    border-bottom :none;
+
+
 }
 .nav-bar{
     position: absolute;
@@ -63,32 +80,41 @@ ul{
   
 }
 .list li{
-    padding-left:20px;
-    padding-right: 20px;
-    padding-top:10px;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top:0.8em;
+    padding-bottom: 0;
+  
 }  
- 
+.location:hover{
+background-color: blueviolet;
+transform: translateY(5px);
+   
+}
 .main-page{
     
     position: relative;
     width:100%;
-   min-height: 100vh;
+   min-height: 105vh;
   opacity:0;
+  
   background: -webkit-linear-gradient(rgba(127, 127, 127, 0),
   rgba(0, 0, 0, 0) 95%,
   rgba(0, 0, 0, 1));
     display: flex;
     justify-content: center;
     
-animation: reveal 4s forwards;
-animation-delay: 1s;
+animation: reveal 3s forwards;
+animation-delay: 3s;
 }
 @keyframes reveal{
     from{
+        
         opacity: 0;
 
     }
     to {
+  
         opacity: 1;
     }
 }
@@ -107,14 +133,27 @@ animation-delay: 1s;
 }
 .heading
 {  
-    font-family: 'Roboto Mono';
+     
     position: relative;
     margin-top: 10%;
     z-index: 3;
     width:50vw;
-    font-size:65px;
-    color:#FFFFFD;
-    font-weight: bolder;
+    font-size: 4em;
+    font-weight: 300;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    clip-path: polygon(0 100%, 0 0, 26% 100%, 0 0);
+    animation: path 1s ease-in forwards;
+    animation-delay: 4s;
+}
+@keyframes path {
+    from{
+        clip-path: polygon(0 100%, 0 0, 26% 100%, 0 0);
+    }
+    to{
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+    
 }
 .date{
     padding:5vh;
@@ -135,16 +174,21 @@ position: relative;
     height: 30em;
     transform: scale(0);
     z-index: 2;
-    animation: pop 1s forwards;
+    animation: pop 3s forwards;
     animation-delay: 4s;
+    clip-path: polygon(39% 34%, 100% 0, 61% 54%, 0% 100%);
+     
 }
 @keyframes pop {
     from{
-        transform: scale(0);
+        clip-path: polygon(39% 34%, 100% 0, 61% 54%, 0% 100%);
+
+        transform: rotateX(-30deg) scale(0);
     }
-    to {transform: scale(1.5);}
+    to {transform: rotateX(0) scale(1.4);
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);}
 }
- h2{
+ .date h2{
      border-bottom:2px solid #000;
      padding-bottom: 10px;
      width:fit-content;
@@ -180,7 +224,7 @@ position: relative;
      background-size: contain;
      background-repeat: no-repeat;
      min-width:15em;
-     min-height: 15em;
+     min-height:15em;
  }
  .footer{
      position: relative;
@@ -323,14 +367,49 @@ width:25em;
       cursor: pointer;
   }
 
+  .overlay{
+      width:100%;
+      min-height: 105vh;
+      
+     display: none;
+      position: absolute;
+      z-index: 100;
+    
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      background-image:linear-gradient(155deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0));
+      border-radius: 7px;
+      background-repeat: no-repeat;
+      background-size: cover;
+ 
+      backdrop-filter: blur(6.2px);
+      -webkit-backdrop-filter:blur(6.2px);
+      border-top: 0.2px solid rgba( 255, 255, 255, 0.71 );
+      border-left: 0.2px solid rgba( 255, 255, 255, 0.71 );
+  }
+ .menu{
+    width:100%;
+    min-height: 105vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+ .menu div{
+     text-align: center;
+     width:10em;
+     background-color: #000;
+     margin-bottom:1em ;
+     padding: 0.5em 1.2em  0.5em 1.2em;
+     border-radius: 10px;
+     cursor: pointer;
+ }
+.d-1{
+    font-size: 2em;
+    font-weight: 500;
   
-
-
-
-
-
-
-
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 1px;
+}
 
  @media (max-width: 800px) {
 
@@ -377,12 +456,15 @@ width:25em;
         animation: pop 1s forwards ;
         animation-delay: 3s;
     }
-    @keyframes pop {
-        from{
-            transform: scale(0);
+        @keyframes pop {
+            from{
+                clip-path: polygon(39% 34%, 100% 0, 61% 54%, 0% 100%);
+        
+                transform: rotateX(-30deg) scale(0);
+            }
+            to {transform: rotateX(0) scale(1.2);
+                clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);}
         }
-        to {transform: scale(1.2);}
-    }
    .footer{
     flex-direction: column;
     justify-content: center;
@@ -392,6 +474,10 @@ width:25em;
     display: flex;
    flex-direction: column;
 }
+.block{
+    display:none;
+}
+
 .about p{
     text-align: center;
     font-size: 15px;
