@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +7,58 @@
     <link rel="stylesheet" href="style_sign_in.css">
     <title>Document</title>
 </head>
-
 <body>
+    <div class="overlay">
+        <div class="menu">
+           <div class="btnFillup liquidbg homie blocks">Home</div>
+            <div class="btnFillup liquidbg signup blocks">sign up</div>
+            <div class="btnFillup liquidbg profile blocks">profile</div>
+            <div class="btnFillup liquidbg events blocks">events</div>
+        </div>
+    </div>
+   <div class="nav-bar">
+       <div class="handles">
+          <ul class="list">
+           
+          <li class="block" ><a class="home location" href="../index.html">Home</a></li>
+          <li class="block"><a class="sign-up location" href="#">SignUp</a></li>
+          <li class=" block"><a class="user-profile location" href="#">Profile</a></li>
+          
+          <li class="dropdown">
+              <img src="../Logo/list.svg" alt="" class="drop-down" style="cursor: pointer; width:1.6em; height:1.6em;">
+
+          </li>
+      </ul>
+       </div>
+   </div>
     <div class="wrap">
         <div class="left-container">
-            <div class="logo">
+            <div class="logo floating">
                 <img src="../Logo/Rickandmorty logo.svg" class="rickandmortysvg" alt="">
+
             </div>
-            <div class="instruction">
-                <h3 style="color:#FFFFFD;">Sign-in with registered Email</h3>
+            <div class="instruction typewriter">
+                <h3 style="color:#FFFFFD; letter-spacing:1px;">Sign-in with registered Email</h3>
                 <hr>
             </div>
-            <div>
-                <form action="" class="form">
-                    <input type="email" name="email" id="email" placeholder="Enter Email">
-                    <input type="password" name="password" id="password" placeholder="Password">
-                    <button type="submit" id="btn">Sign me In!</button>
+            <div >
+            <form   action="" class="form">
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+                <input type="password" name="password" id="password" placeholder="Password">
+                <button type="submit" id="btn">Sign me In!</button>
 
-                </form>
+            </form>
             </div>
             <div class="has-account">
-                Haven't registered yet? <span><a href="#">Sign-Up</a></span>
+                Haven't registered yet? <span><a class="sign-up-has-account" href="#">Sign-Up</a></span>
             </div>
         </div>
         <div class="right-container">
-
+        <h1>
+            Welcome to Prospero,Again.
+        </h1>
         </div>
     </div>
     <script src="sign_in_app.js" defer></script>
 </body>
-
 </html>
