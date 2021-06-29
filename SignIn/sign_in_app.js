@@ -5,12 +5,37 @@ console.log(body);
 window.addEventListener("resize", resize_blur);
 function resize_blur() {
     body.style.filter = "blur(4px)";
-    setTimeout(restore, 200);
+    setTimeout(restore, 500);
 
 }
 function restore() {
     body.style.filter = "blur(0px)";
 }
+document.querySelector(".sign-up-has-account").addEventListener("click",()=>{
+ location.href="../Signup/signup.html";
+});
+document.querySelector(".sign-up").addEventListener("click",()=>{
+    location.href="../Signup/signup.html";
+   });
+   document.querySelector(".signup").addEventListener("click",()=>{
+    location.href="../Signup/signup.html";
+   });
+
+
+   document.querySelector(".profile").addEventListener("click",()=>{
+    location.href="../user_profile/userprofile.html";
+   });
+   document.querySelector(".user-profile").addEventListener("click",()=>{
+    location.href="../user_profile/userprofile.html";
+   });
+ 
+
+document.querySelector(".dropdown").addEventListener("click",()=>{
+    document.querySelector(".overlay").style.display="block";
+});
+document.querySelector(".menu").addEventListener("click",()=>{
+    document.querySelector(".overlay").style.display="none";
+});
 const signIn = document.querySelector(".form");
 
 signIn.addEventListener("submit", (event) => {
