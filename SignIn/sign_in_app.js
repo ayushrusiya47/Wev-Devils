@@ -1,5 +1,5 @@
 "use strict"
-// const url = "http://localhost:8000"
+const url = "http://localhost:8000"
 const body = document.querySelector('body');
 console.log(body);
 window.addEventListener("resize", resize_blur);
