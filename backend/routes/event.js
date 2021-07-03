@@ -9,14 +9,16 @@ const {
   status,
   registerAll,
   unregisterAll,
+  openStatus,
 } = require("../contollers/event"); //Getting functions
 const { verifyToken } = require("../middlewares/authMiddleware"); //Middleware for verifying token
 
 //Requests
-router.put("/register", verifyToken, register);
-router.put("/unregister", verifyToken, unregister);
-router.get("/status", verifyToken, status);
-router.put("/registerAll", verifyToken, registerAll);
-router.put("/unregisterAll", verifyToken, unregisterAll);
+router.put("/register", verifyToken, register); //For registering in a event
+router.put("/unregister", verifyToken, unregister); //For unregistering from a event
+router.get("/status", verifyToken, status); // Registration status of a event
+router.get("/openStatus", verifyToken, openStatus); // Open/Close event status
+router.put("/registerAll", verifyToken, registerAll); // For registering all events
+router.put("/unregisterAll", verifyToken, unregisterAll); // For unregistering all events
 
 module.exports = router;
