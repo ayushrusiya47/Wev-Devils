@@ -12,6 +12,7 @@ exports.verifyToken = (req, res, next) => {
       res.status(500).json({
         error: "JWT verification error in verifyToken middleware",
       });
+      console.log(err);
     } else {
       const email = decoded.email;
       client
