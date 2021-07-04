@@ -38,12 +38,15 @@ exports.signUp = (req, res) => {
               e2: "FALSE",
               e3: "FALSE",
               e4: "FALSE",
+              e5: "False",
+              // To add more event update code here.
             }; // Data of new user
 
             client
               // Adding user to database
               .query(
-                `INSERT INTO users (name, email, password,e1,e2,e3,e4) VALUES ('${user.name}', '${user.email}' , '${user.password}', '${user.e1}', '${user.e2}', '${user.e3}', '${user.e4}');`
+                `INSERT INTO users (name, email, password,e1,e2,e3,e4,e5) VALUES ('${user.name}', '${user.email}' , '${user.password}', '${user.e1}', '${user.e2}', '${user.e3}', '${user.e4}', '${user.e5}');`
+                // To add more event update code here. Updates required at two places
               )
               .then((data) => {
                 //Generating token for email using private key

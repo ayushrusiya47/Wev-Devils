@@ -15,13 +15,13 @@ exports.getList = (req, res) => {
       client
         //Fetching users from database ordered by email
         .query(
-          `SELECT name, email, e1, e2, e3, e4
+          `SELECT name, email, e1, e2, e3, e4, e5
           FROM users 
           ORDER BY email
           OFFSET ${items * (page - 1)} ROWS
           FETCH NEXT ${items} ROWS ONLY
           `
-        )
+        ) // To add more event update code here.
         .then((data) => {
           res.status(200).json(data.rows); // Returning array of users for given page
         })
@@ -37,14 +37,14 @@ exports.getList = (req, res) => {
       client
         //Fetching users from database registered for a particular event ordered by email
         .query(
-          `SELECT name, email, e1, e2, e3, e4
+          `SELECT name, email, e1, e2, e3, e4, e5
           FROM users 
           WHERE ${event} = TRUE
           ORDER BY email
           OFFSET ${items * (page - 1)} ROWS
           FETCH NEXT ${items} ROWS ONLY
           `
-        )
+        ) // To add more event update code here.
         .then((data) => {
           res.status(200).json(data.rows); // Returning user list as array
         })
@@ -69,7 +69,8 @@ exports.count = (req, res) => {
   var email = req.email;
   //If the user is admin
   if (email == "Admin@techx.com") {
-    var arr = { total: 0, e1: 0, e2: 0, e3: 0, e4: 0 }; // For storing no. of registrations
+    var arr = { total: 0, e1: 0, e2: 0, e3: 0, e4: 0, e5: 0 }; // For storing no. of registrations
+    // To add more event update code here.
     client
       // For all users registered in fest
       .query(
@@ -153,6 +154,25 @@ exports.count = (req, res) => {
       )
       .then((data) => {
         arr.e4 = parseInt(data.rows[0].count); //The query gives string hence converting to int
+      })
+      .catch((err) => {
+        res.status(500).json({
+          error: "Database error in admin count! 5",
+        });
+      });
+
+    // To add more event update code here. Add new query here
+    client
+      //For users registered in e5
+      .query(
+        `SELECT 
+      COUNT(*)
+      FROM users
+      WHERE e5 = TRUE 
+        `
+      )
+      .then((data) => {
+        arr.e5 = parseInt(data.rows[0].count); //The query gives string hence converting to int
         res.status(200).json(arr); //Sending data here because this is last query and it will run after rest of query are completed
         //to be checked synchronous asynchronous pata nhi kya (-_-)
       })
@@ -178,8 +198,8 @@ exports.eventClose = (req, res) => {
   if (email == "Admin@techx.com") {
     client
       .query(
-        `UPDATE USERS
-        SET ${event} = NULL`
+        `UPDATE event
+        SET ${event} = True`
       )
       .then(() => {
         res.sendStatus(204);
@@ -205,9 +225,9 @@ exports.eventOpen = (req, res) => {
   if (email == "Admin@techx.com") {
     client
       .query(
-        `UPDATE USERS
+        `UPDATE event
       SET ${event} = FALSE`
-      ) // If someone was registered before cancel, he will be unregistered -- TO BE FIXED
+      )
       .then(() => {
         res.sendStatus(204);
       })
