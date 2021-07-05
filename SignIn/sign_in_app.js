@@ -37,6 +37,7 @@ document.querySelector(".dropdown").addEventListener("click",()=>{
 document.querySelector(".menu").addEventListener("click",()=>{
     document.querySelector(".overlay").style.display="none";
 });
+
 const signIn = document.querySelector(".form");
 
 signIn.addEventListener("submit", (event) => {
