@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
 *{
     padding:0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto Mono';
     color:#FFFFFD;
+}
+a{
+    font-family: 'Dosis',cursive;
+    letter-spacing: 2px;
 }
 .floating {  
     animation-name: floating;
@@ -24,20 +30,36 @@
 
 body,html{
   overflow-x: hidden;
-    background-color: rgb(6, 122, 255);
+    background-color: rgb(0, 0, 0);
     /* "https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif" */
     background-image: url("https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif");
+    /* background-image: url("../New folder/rick-y-morty-fanart-2020-6344.png"); */
        background-position: center;
        background-repeat: no-repeat;
        background-size: cover;
-    transition: background-image 1s;
+    /* transition: background-image 1s; */
      display: flex;
      flex-direction: column;
      scroll-behavior: smooth;
      
     
 }
-
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0); 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: url("https://media1.popsugar-assets.com/files/thumbor/LGrCTpGbDAJikZOU9K3BuCnHmb4/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/04/24/742/n/1922398/150fb890_y0VW29.gif"); 
+    border-radius: 10px;
+  }
+ 
    span{
        background-color: black;
        font-size: 1em;
@@ -77,6 +99,7 @@ ul{
     font-size: 20px;
     font-weight: 900;
     flex-wrap: wrap;
+    font-family: 'Dosis', sans-serif;
   
 }
 .list li{
@@ -94,13 +117,17 @@ transform: translateY(5px);
 .main-page{
     
     position: relative;
+    z-index: 100;
     width:100%;
    min-height: 105vh;
   opacity:0;
-  
-  background: -webkit-linear-gradient(rgba(127, 127, 127, 0),
+  background-image: url("https://cdn.dribbble.com/users/1516344/screenshots/6617658/17_liquidbackgrounds_2_1600x1200_1_4x.jpg");
+  background-size:cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background: -webkit-linear-gradient(rgba(127, 127, 127, 0),
   rgba(0, 0, 0, 0) 95%,
-  rgba(0, 0, 0, 1));
+  rgba(0, 0, 0, 1)); */
     display: flex;
     justify-content: center;
     
@@ -204,6 +231,7 @@ position: relative;
      margin-top: 40px;
       border: none;
      text-align: center;
+     cursor: pointer;
  }
  .btn-events:hover{
     background-color:white;
@@ -372,8 +400,8 @@ width:25em;
       min-height: 105vh;
       
      display: none;
-      position: absolute;
-      z-index: 100;
+      position: fixed;
+      z-index: 1000;
     
       box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
       background-image:linear-gradient(155deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0));
@@ -389,6 +417,7 @@ width:25em;
  .menu{
     width:100%;
     min-height: 105vh;
+    position: fixed;
      display: flex;
      flex-direction: column;
      justify-content: center;
@@ -396,7 +425,7 @@ width:25em;
  }
  .menu div{
      text-align: center;
-     width:10em;
+     width:20em;
      background-color: #000;
      margin-bottom:1em ;
      padding: 0.5em 1.2em  0.5em 1.2em;
@@ -406,8 +435,9 @@ width:25em;
 .d-1{
     font-size: 2em;
     font-weight: 500;
-  
-    font-family: 'Staatliches', cursive;
+   
+    font-family: 'Dosis', cursive;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
@@ -437,6 +467,9 @@ width:25em;
         width:100%;
         font-size:0.7em;
         text-align: center;
+    }
+    .date h2{
+        width:20em;
     }
     .logo {
         position: relative;
