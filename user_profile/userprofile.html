@@ -5,34 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="userprofile.css">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
     <title>Document</title>
 </head>
 <body>
+    
+    <div class="overlay">
+        <div class="menu">
+           <div class="btnFillup liquidbg homie blocks">Home</div>
+            <div class="btnFillup liquidbg events blocks">events</div>
+            <div class="btnFillup liquidbg eventlist blocks">list</div>
+        </div>
+    </div>
+   <div class="nav-bar">
+       <div class="handles">
+          <ul class="list">
+          <li class="block" ><a class="home location" href="../index.html">Home</a></li>
+          <li class=" block"><a class="event-location location" href="#">Events</a></li>
+          <li class=" block"><a class="event-list location" href="#">List</a></li>
+          <li class=" block"><a class="media location" href="#">Moderation</a></li>
+          <li class="dropdown">
+              <img src="../Logo/list.svg" alt="" class="drop-down" style="cursor: pointer; width:1.6em; height:1.6em;">
 
+          </li>
+      </ul>
+       </div>
+   </div>
     <div class="wrap">
         <div class="left-container">
-            <div class="user-id-pic">
+            
+            <div class="card-container">
                 
-            </div>
-            <div class="id">
-            <h3>Vladimir</h3>
-            <h3 class="gradient-text">Participant</h3>
-            </div>
-                <div class="user-detail">
-                    <div class="username">
-                      <h3 style="text-align: center;">User-name</h3> @vladimir2001          
-                    </div>
-                    <div class="email">
-                        <h3 style="text-align:center;">Email</h3>
-                         @arthrajcool@gmail.com
-                    </div>
+                <div class="user-id-pic">
                 </div>
+                <div class="badge">
+                    <b>PRO</b>
+                    
+                </div>
+                <div class="id">
+                <h3>Vladimir</h3>
+                <h3 class="gradient-text">Participant</h3>
+                </div>
+                <div class="username">@vladimir2001</div>
+               <div class="email">kanyewest@gmail.com</div>
+               <iframe class="frame" src="https://discord.com/widget?id=829766052429955092&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
         </div>
         <div class="right-container">
+            <h1 class="registered">Registered Events</h1>
             <div class="card-event">
                 <div class="card card0">
                     <div class="close-btn">
-                        <img class="close" src="../New folder/x-circle.svg" alt="">
+                        <button>Unregister</button>
                     </div>                    
                 <div class="title">  
                  <div> <h2 class="event-heading">The Score-Band</h2></div>
@@ -51,16 +75,29 @@
                            <h4 class="gradient-text">@vladimir2001</h4>
                        </div>
                     </div>
-
+  
                 </div>
               </div>
         </div>
-        <div class="list-btn">
+        <div style="display:none;"class="list-btn">
             <div class="left"><img src="../New folder/arrow-left-circle-fill.svg" alt=""></div>
             <div class="right"><img src="../New folder/arrow-right-circle-fill.svg" alt=""></div>
+ 
         </div>
+        <div class="moderation">
+            
+            
+           <div class='discord'>
+               <h1>View Discord activity</h1>
+                <iframe class="chat" src="https://e.widgetbot.io/channels/829766052429955092/829766052429955101" frameborder="0" height="600" width="800"></iframe>
+           </div>
+           
+        </div>
+     
+
+    
     </div>
-    </div>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
     <script src="userprofile.js"></script>
 </body>
 </html>
