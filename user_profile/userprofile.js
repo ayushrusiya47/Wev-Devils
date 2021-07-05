@@ -52,7 +52,7 @@ card.addEventListener("mouseleave",()=>{
 //
 //
 //
-//
+//http://127.0.0.1:5500/
 //
 
 function onclickchange(pos){
@@ -99,10 +99,31 @@ function onclickchange(pos){
     }
 }
    
+const home=document.querySelector(".home");
+home.addEventListener("click",()=>{
+location.href="../index.html";
+});
+document.querySelector(".homie").addEventListener("click",()=>{
+    location.href="../index.html";
+})
+document.querySelector(".events").addEventListener("click",()=>{
+    location.href="../Events/events.html";
 
+})
+document.querySelector(".event-location").addEventListener("click",()=>{
+    location.href="../Events/events.html";
+    
+})
+document.querySelector(".dropdown").addEventListener("click",()=>{
+    document.querySelector(".overlay").style.display="block";
+});
+document.querySelector(".menu").addEventListener("click",()=>{
+    document.querySelector(".overlay").style.display="none";
+});
 
 
    
 
 setInterval(backgroundchange,3000);
 
+// AOS.init();
