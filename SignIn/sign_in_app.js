@@ -1,5 +1,5 @@
 "use strict"
-const url = "http://localhost:8000"
+
 const body = document.querySelector('body');
 console.log(body);
 window.addEventListener("resize", resize_blur);
@@ -11,33 +11,33 @@ function resize_blur() {
 function restore() {
     body.style.filter = "blur(0px)";
 }
-document.querySelector(".homie").addEventListener("click",()=>{location.href="../index.html"});
-document.querySelector(".sign-up-has-account").addEventListener("click",()=>{
- location.href="../Signup/signup.html";
+document.querySelector(".homie").addEventListener("click", () => { location.href = "../index.html" });
+document.querySelector(".sign-up-has-account").addEventListener("click", () => {
+    location.href = "../Signup/signup.html";
 });
-document.querySelector(".sign-up").addEventListener("click",()=>{
-    location.href="../Signup/signup.html";
-   });
-   document.querySelector(".signup").addEventListener("click",()=>{
-    location.href="../Signup/signup.html";
-   });
-
-
-   document.querySelector(".profile").addEventListener("click",()=>{
-    location.href="../user_profile/userprofile.html";
-   });
-   document.querySelector(".user-profile").addEventListener("click",()=>{
-    location.href="../user_profile/userprofile.html";
-   });
- document.querySelector(".events").addEventListener("click",()=>{
-     location.href="../Events/events.html";
- });
-
-document.querySelector(".dropdown").addEventListener("click",()=>{
-    document.querySelector(".overlay").style.display="block";
+document.querySelector(".sign-up").addEventListener("click", () => {
+    location.href = "../Signup/signup.html";
 });
-document.querySelector(".menu").addEventListener("click",()=>{
-    document.querySelector(".overlay").style.display="none";
+document.querySelector(".signup").addEventListener("click", () => {
+    location.href = "../Signup/signup.html";
+});
+
+
+document.querySelector(".profile").addEventListener("click", () => {
+    location.href = "../user_profile/userprofile.html";
+});
+document.querySelector(".user-profile").addEventListener("click", () => {
+    location.href = "../user_profile/userprofile.html";
+});
+document.querySelector(".events").addEventListener("click", () => {
+    location.href = "../Events/events.html";
+});
+
+document.querySelector(".dropdown").addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "block";
+});
+document.querySelector(".menu").addEventListener("click", () => {
+    document.querySelector(".overlay").style.display = "none";
 });
 
 const signIn = document.querySelector(".form");
@@ -47,7 +47,7 @@ signIn.addEventListener("submit", (event) => {
 
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
-    fetch('http://localhost:8000/auth/signin', {
+    fetch('https://web-devil.herokuapp.com/auth/signin', {
         method: "POST",
         headers: {
             'Content-Type': "application/json",

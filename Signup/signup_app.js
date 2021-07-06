@@ -44,7 +44,7 @@ document.querySelector(".menu").addEventListener("click",()=>{
     document.querySelector(".overlay").style.display="none";
 });
 
-const Url = "https://web-devil.herokuapp.com";
+
 let signUpForm = document.querySelector(".form");
 signUpForm.addEventListener("submit", (event) => {
   event.preventDefault();
