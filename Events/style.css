@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+    padding:0;
+    margin:0;
+ 
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+/*Animation*/
+@keyframes align {
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity:1;
+      
+    }
+    
+}
+@keyframes reveal{
+    from{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);         
+    }
+}
+@keyframes leave{
+    from{
+        bottom: -10%;
+        transform: scale3d(1.3,1.3,1);
+    
+    }
+    
+    to{
+        bottom: -35%;
+        transform: scale3d(1.5,1.5,1);
+        opacity: 0;
+       
+
+    }
+}
+@keyframes enter{
+    from{
+          opacity: 1;
+           bottom:60%;
+           transform: scale(0.5);
+            
+      }
+      
+      to {
+          opacity: 1;
+          bottom: -10%;
+          transform: scale3d(1.3,1.3,1); 
+         
+      }
+      }
+      /*Animation*/
+      html{
+         
+          background-color: black;
+      }
+.body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+}
+.nav-bar{
+    position: absolute;
+     z-index: 10000;
+     width:100%;
+     display: flex;
+     justify-content: flex-end;
+    
+   
+}
+ul{
+    list-style-type:none;
+}
+.list{
+    display:flex;
+    font-size: 20px;
+    font-weight: 900;
+    flex-wrap: wrap;
+  
+}
+.list li{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top:0.8em;
+    padding-bottom: 0;
+  
+}  
+.location{
+   
+    background-color: rgb(228, 220, 220);
+    padding: 0.5em 1.2em  0.5em 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition:border-bottom  1s ease ;
+    border-bottom :none;
+
+
+}
+.block{
+    animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;
+    opacity: 0;
+}
+.location:hover{
+
+ background-image:url("https://media0.giphy.com/media/2Et7fcUhkRI7C/giphy.gif?cid=790b76115a679418fa6a47a1b2dea1385b55a32871320bb8&rid=giphy.gif&ct=g");
+  background-size:cover; 
+}
+.block:hover{
+    background-image: url("https://giphy.com/gifs/no-dripping-2Et7fcUhkRI7C");
+    background-size: contain;
+}
+.container{
+    position:relative;
+    width:100%;
+    z-index: 100;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     background-color: black;
+     perspective: 800px;
+  
+
+}
+.img1 ,.img2,.img3,.img4,.img5,.img6,.img7 {
+    
+    background-position: center;
+    background-size:contain;
+    position: absolute;
+    background-repeat: no-repeat;
+    min-width:100vw;
+    min-height:100vh;
+    overflow: visible;
+    transform: scale(0.1);
+    box-shadow: -8px -157px 155px 21px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: -8px -157px 155px 21px rgba(0,0,0,1) inset;
+    -moz-box-shadow: -8px -157px 155px 21px rgba(0,0,0,1) inset;
+    transition: all 2s ease-in;
+}
+ 
+.styler{
+    font-size: 3em;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/535f056fe4b0e8117290a656/1493064701336-G4OBRB60L1P04V3IK51D/Breaking+Bad+Vodka+by+Beverage+Photographer+Austin+Burke?format=750w");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.img1{
+    background-image: url("116-1161616_responsive-image-bob-marley-with-lion_adobespark.png");
+
+}
+.img2{
+    background-image: url("voyager_poster_final-lores-768x1024_adobespark.png");
+
+}
+.img3{
+    background-image: url("8-removebg-preview.png");
+}
+.img4{
+    background-image: url("pexels-shelagh-murphy-1666816-removebg-preview.png");
+}
+.img5{
+    background-image: url("Double-exposures-by-Nevessart-575517b3e4fbc__700_adobespark.png");
+}
+.img6{
+    background-image: url("Layer 1.png");
+}
+.img7{
+    background-image: url("skull.png");
+}
+.enter{
+ 
+    animation: enter 5s linear forwards ;
+    transition: animation-play-state 1s ease-out;
+
+}
+
+.leave{
+     
+    z-index: 100;
+    animation: leave 2s linear forwards;
+    transition: animation-play-state 1s ease-out;
+     
+}
+
+.text{
+    position: absolute;
+    z-index:1000;
+    color:white;
+    top:5%;
+    left:2%;
+     
+    
+     
+}
+ 
+.text h1{
+   
+    font-size: 7em;
+    letter-spacing:5px; 
+    background-image: url("https://i.gifer.com/BlKh.gif");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+ animation:reveal 2s linear forwards;
+    
+}
+.info{
+    position: relative;
+    font-size:2em;
+    width:50%;
+ overflow: hidden;
+}
+.social{
+    position:fixed;
+    z-index: 10000;
+    bottom: 0;
+   width:100%;
+   margin: auto;
+}
+  .social ul{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style-type: none;
+
+  }
+  .social ul li{
+     margin-left: 1em;
+     margin-right: 0.5em;
+      padding:10px;
+      cursor: pointer;
+     opacity: 0;
+  }
+  
+  .social ul li svg{
+      width:2em;
+      height: 2em;
+      fill:rgb(158, 0, 250);
+  }
+.list1 svg:hover{ transform: scale(1.2); fill:#0407c3;}
+.list1{ animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;animation-delay:200ms; }
+.list2 svg:hover{ transform: scale(1.2); fill:#27cfec;}
+.list2{ animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;animation-delay:400ms; }
+.list3 svg:hover{ transform: scale(1.2); fill:#ff0101;}
+.list3{ animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;animation-delay:600ms; }
+.list4 svg:hover{ transform: scale(1.2); fill:#00a2ff;}
+.list4{ animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;animation-delay:800ms; }
+.list5 svg:hover{ transform: scale(1.2); fill:#ff5c1c;}
+.list5{ animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;animation-delay:1000ms;}
+.list6 svg:hover{ transform: scale(1.2); fill:#3b58ff;}
+.list6{ animation: align 1.5s cubic-bezier(.32,1.16,.48,1.06) forwards;animation-delay:1200ms;}
+.register{
+  position: relative;
+  z-index: 100;
+ margin-top:1em;
+
+}
+.reg{
+    width:170px;
+    height: 40px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    border:2px solid #77ff1c;
+    background-color: rgb(59, 59, 59);
+}
+.reg:hover{
+    background-image: url("https://i.pinimg.com/originals/07/6d/7b/076d7b1b9748345cbf1027ec6d131b9e.gif");
+    background-size: cover;
+    border:2px solid #ff5c1c;
+    background-repeat: no-repeat;
+    color:white;
+}
+.expand{
+    position: relative;
+    z-index: 100;
+    margin-top: 5em;
+ 
+}
+.btn{ width:60px;
+    height: 60px;
+    background-color: #ff5c1c;
+    border-radius: 50%;
+    border:none;padding:10px;
+}
+.btn:hover{
+    background-image: url("https://i.pinimg.com/originals/77/69/8a/77698a40a7542ad76e0858cb35bd076d.gif");
+    background-size: cover;
+    border:2px solid #069cf3;
+    width:60px;
+    height: 60px;
+}
+.btnFillup {
+    display: inline-block;
+    padding: 16px;
+    overflow: hidden;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    background-position: 0 -100%;
+    background-repeat: repeat-x;
+    transition: background-position 1.5s ease;
+  }
+  .btnFillup:hover {
+    background-position: 100% 50%;
+    border-color: rgb(0, 0, 0);
+    color: white;
+  }
+  .liquidbg {
+    background-image: url('https://cdn.dribbble.com/users/1463692/screenshots/5486307/drips_v01.gif');
+    background-size: cover;
+  }
+  .menu{
+    width:100vw;
+    min-height: 105vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  .overlay2{
+    width:100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 100000;
+    display:none;
+    -webkit-backdrop-filter: blur(6.3px);
+    backdrop-filter: blur(6.3px);
+    background-color: rgba(0,191,255, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+ 
+  .blocks
+  {
+      width:10em;
+      background-color: rgb(204, 204, 204);
+      color:rgb(0, 0, 0);
+      font-size: 1.2em;
+      font-weight: 500;
+      font-family: 'Dosis', sans-serif;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 1em;
+      padding:0.5em;
+      border-radius: 13px;
+     cursor: pointer;
+  }
+@media (max-width:1200px)
+{
+  .text{
+      font-size:0.5em;
+  }
+  .block{
+    display: none;
+}
+.blocks{
+    width:28vh;
+}
+}
