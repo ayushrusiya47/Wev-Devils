@@ -39,7 +39,10 @@
     margin-left: 30px;
     margin-top: 5px;
 }
-  
+  a{
+      font-family:'Dosis',cursive;
+      letter-spacing: 2px;
+  }
 .nav-bar{
     position: absolute;
      z-index: 3;
