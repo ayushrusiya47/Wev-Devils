@@ -29,7 +29,9 @@ document.querySelector(".sign-up").addEventListener("click",()=>{
    document.querySelector(".user-profile").addEventListener("click",()=>{
     location.href="../user_profile/userprofile.html";
    });
- 
+ document.querySelector(".events").addEventListener("click",()=>{
+     location.href="../Events/events.html";
+ });
 
 document.querySelector(".dropdown").addEventListener("click",()=>{
     document.querySelector(".overlay").style.display="block";
