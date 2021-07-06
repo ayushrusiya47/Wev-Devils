@@ -31,6 +31,12 @@ document.querySelector(".profile").addEventListener("click",()=>{
    document.querySelector(".user-profile").addEventListener("click",()=>{
     location.href="../user_profile/userprofile.html";
    });
+   document.querySelector(".event").addEventListener("click",()=>{
+     location.href="../Events/events.html";
+   });
+   document.querySelector(".events").addEventListener("click",()=>{
+    location.href="../Events/events.html";
+  });
 document.querySelector(".dropdown").addEventListener("click",()=>{
     document.querySelector(".overlay").style.display="block";
 });
@@ -38,7 +44,7 @@ document.querySelector(".menu").addEventListener("click",()=>{
     document.querySelector(".overlay").style.display="none";
 });
 
-const Url = "http://localhost:8000";
+const Url = "https://web-devil.herokuapp.com";
 let signUpForm = document.querySelector(".form");
 signUpForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -56,7 +62,7 @@ signUpForm.addEventListener("submit", (event) => {
     return;
   }
   // have to change this after deploying backend
-  fetch("http://localhost:8000/auth/signUp", {
+  fetch("https://web-devil.herokuapp.com/auth/signUp", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
