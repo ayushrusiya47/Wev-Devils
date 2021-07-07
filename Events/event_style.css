@@ -165,7 +165,7 @@ html,body{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
- overflow: hidden;
+ overflow-x: hidden;
  
 }
 .text-heading{
@@ -237,6 +237,14 @@ html,body{
   text-decoration: underline;
   margin-top: 1em;
   display: none;
+}
+.g-1,.g-2,.g-3,.g-4{
+  display: none;
+  font-family: 'Dosis',cursive;
+  font-size: 1em;
+  color:greenyellow;
+  letter-spacing: 2px;
+  text-align: left;
 }
 
 .ticket-visual_visual {
@@ -447,7 +455,7 @@ cursor:pointer;
 
 }
 @media (max-width:1200px)
-{
+{ 
   .heading-1{
     font-size:3em;
    width: 100%;
@@ -506,4 +514,39 @@ height:100vh;
   .container-2{
     background-size: contain;
   }
+}
+@media(max-width:800px)
+{
+  #ticket{
+    width:100%;
+    height: fit-content;
+ }
+ /* .overlay{
+   overflow-y: auto;
+   display: grid;
+   place-content: center;
+ } */
+ .final-register{
+   min-height:10vw;
+ }
+ .final-unregister{
+  min-height:10vw;
+}
+ .ticket-visual_ticket-number-wrapper{
+   bottom: 0px;
+   position: relative;
+   width:100%;
+   right:0;
+   border: none;
+   border-top: 2px dashed #333;
+   border-bottom:0px solid black ;
+   display:grid;
+   place-content: center;
+ }
+ .ticket-visual_ticket-number {
+  transform-origin: center;
+  padding-bottom: 1em;
+ 
+   transform: rotate(0deg);
+ }
 }
