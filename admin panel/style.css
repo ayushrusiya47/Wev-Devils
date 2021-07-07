@@ -1,0 +1,83 @@
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+    
+}
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+html { 
+    background: url("./logo/admin\ bg1.jpg") no-repeat center center fixed; 
+    /* background: url("./open\ \ event/index.html") no-repeat center center fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+.containers{
+    display: flex;
+}
+.left{
+    float: right;
+    /* background-color: #000000; */
+    width:50vw;
+    height: 100vh;
+    display: flex;
+     flex-direction: column; 
+     align-items: center;
+    justify-content: flex-start; 
+}
+
+.head{
+    color:linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.text{
+    margin-right: 25px;
+}
+.img{
+    margin-top: 15px;
+}
+h3 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.body{
+    
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.s1 , .s2 , .s3 , .s4{
+    font-size:40px;
+    height:80px;
+    width: 400px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    background: linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    margin: 50px;
+}
+.s1:hover , .s2:hover , .s3:hover, .s4:hover{
+    cursor: pointer;
+}
+.right{
+    height: 100vh;
+    width: 50vw;
+}
