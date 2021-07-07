@@ -16,8 +16,9 @@ const imgUrls = [
     unregister: "https://web-devil.herokuapp.com/event/unregister",
     registerAll: "https://web-devil.herokuapp.com/event/registerAll",
     unregisterAll: "https://web-devil.herokuapp.com/event/unregisterAll",
+    getCode: "https://web-devil.herokuapp.com/userData/changeCode"
   };
-  const token = localStorage.getItem("jwt");
+  var token = localStorage.getItem("jwt");
   //BackUpdate 1, URLs for fetching data and token extraction
   // For session managment
   window.addEventListener("load", () => {
@@ -197,6 +198,31 @@ const imgUrls = [
 
 
 //!Do nothing here
+
+// fetch(dataUrls.status, {
+//     method: "GET",
+//     headers: {
+//       authorization: token,
+//     },
+//   })
+//   .then((res) => res.json())
+//   .then((data) => {
+//     var code = data.code; 
+//   });
+
+// fetch(dataUrls.changeCode, {
+//     method: "PUT",
+//     headers: {
+//       "Content-Type": "application/json",
+//       authorization: token,
+//     },
+//     body: JSON.stringify({ code: 1 }),
+//   })
+//   .then((res) => res.json())
+//   .then((data) => {
+//     token = data.token; // Registration Status
+//     localStorage.setItem("jwt", token);
+//   });
 
 let arr=[];
 for(let i=0;i<7;i++)
