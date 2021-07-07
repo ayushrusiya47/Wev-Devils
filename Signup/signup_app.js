@@ -52,6 +52,7 @@ signUpForm.addEventListener("submit", (event) => {
   const name = document.querySelector("#username").value;
   const password = document.querySelector("#password").value;
   const confirmPassword = document.querySelector("#confirm-password").value;
+  const userName = document.querySelector().value; // Add the user name identifier in query selector
   const checkbox = document.querySelector("#check-box").value;
   // console.log(email, name, password);
   if (checkbox === false) {
@@ -67,7 +68,7 @@ signUpForm.addEventListener("submit", (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ name, email, password }),
+    body: JSON.stringify({ name, email, password, userName}),
   })
     .then((res) => res.json())
     .then((data) => {
