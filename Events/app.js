@@ -16,9 +16,44 @@ const imgUrls = [
     unregister: "https://web-devil.herokuapp.com/event/unregister",
     registerAll: "https://web-devil.herokuapp.com/event/registerAll",
     unregisterAll: "https://web-devil.herokuapp.com/event/unregisterAll",
-    getCode: "https://web-devil.herokuapp.com/userData/changeCode"
+    getCode: "https://web-devil.herokuapp.com/userData/getCode",
+    changeCode: "https://web-devil.herokuapp.com/userData/changeCode"
   };
-  var token = localStorage.getItem("jwt");
+  const token = localStorage.getItem("jwt");
+  window.addEventListener("resize",()=>{
+    if(window.innerWidth<900)
+    {
+      for(let i=0;i<5;i++){ document.querySelector(`.s-${i+1}`).style.display="none";}
+  
+    }
+    else{
+      for(let i=0;i<5;i++){ document.querySelector(`.s-${i+1}`).style.display="none";}
+    for(let i=0;i<5;i++){ document.querySelector(`.f-${i+1}`).style.display="none";}
+    if (token) {
+      console.log("test1"); //!@shimkhar case: user signed in, make changes accordingly like remove signin, signup butttons add signout etc.
+      document.querySelector(".s-1").style.display="block";
+      document.querySelector(".f-1").style.display="block";
+      document.querySelector(".f-3").style.display="block";
+      document.querySelector(".s-3").style.display="block";
+      document.querySelector(".f-5").style.display="block";
+      document.querySelector(".s-5").style.display="block";
+
+       
+      
+    } else {
+      console.log("test2"); //!@shimkhar case: user not signed in, make changes accordingly
+      document.querySelector(".s-1").style.display="block";
+      document.querySelector(".f-1").style.display="block";
+      document.querySelector(".f-2").style.display="block";
+      document.querySelector(".s-2").style.display="block";
+      document.querySelector(".f-4").style.display="block";
+      document.querySelector(".s-4").style.display="block";
+      
+    
+    }
+    }
+
+  })
   //BackUpdate 1, URLs for fetching data and token extraction
   // For session managment
   window.addEventListener("load", () => {
@@ -46,7 +81,14 @@ const imgUrls = [
       
     
     }
-  }); //BackUpdate 1, For session management
+    if(window.innerWidth<900)
+  {
+    for(let i=0;i<5;i++){ document.querySelector(`.s-${i+1}`).style.display="none";}
+
+  }
+  }
+  
+  ); //BackUpdate 1, For session management
 
   let logout = document.querySelector(".logout");
   logout.addEventListener("click", () => {
@@ -107,6 +149,12 @@ const imgUrls = [
         for (let [key, value] of Object.entries(opStatus)){opst.push(value)}
         let finalbtn=document.querySelector(".final-register");
         let unregbtn=document.querySelector(".final-unregister");
+        for(let i=0;i<4;i++){
+          if(regst[i])
+          {
+            document.querySelector(`.g-${i+1}`).style.display="block";
+          }
+        }
         for (let [key, value] of Object.entries(opStatus)) {
            if(!value&&ctr<4)
            {  
@@ -145,7 +193,7 @@ const imgUrls = [
             }
             else{
               finalbtn.innerHTML=`Register`;
-              finalbtn.addEventListener("click",()=>{
+             if(opst[ptr]){ finalbtn.addEventListener("click",()=>{
                 fetch(dataUrls.register, {    //Swap register with unregister for unregistering
     method: "PUT",
     headers: {
@@ -157,7 +205,7 @@ const imgUrls = [
   setTimeout(() => {
     location.reload();
   }, 2000);
-              });
+              });}
             }
             });
         });
@@ -180,9 +228,35 @@ const imgUrls = [
   // });
   //BackUpdate 3 , for registering and unregistering from events
   //!@shimkhar , For registration and unregistration of events modify the above code accordingly and put inside callback in eventlisteners
+  
+ let code;
 
+fetch(dataUrls.getCode, {
+    method: "GET",
+    headers: {
+      authorization: token,
+    },
+  })
+  .then((res) => res.json())
+  .then((data) => {
+   code = data.code; 
+   console.log(code);
+//  document.querySelector(".ticket-profile_image").setAttribute("src",`../avatars/${Number(index)+1}.gif`);
+  });
 
-
+// fetch(dataUrls.changeCode, {
+//     method: "PUT",
+//     headers: {
+//       "Content-Type": "application/json",
+//       authorization: token,
+//     },
+//     body: JSON.stringify({ code: 1 }),
+//   })
+//   .then((res) => res.json())
+//   .then((data) => {
+//     token = data.token; // Registration Status
+//     localStorage.setItem("jwt", token);
+//   });
 
 
 
@@ -198,31 +272,6 @@ const imgUrls = [
 
 
 //!Do nothing here
-
-// fetch(dataUrls.status, {
-//     method: "GET",
-//     headers: {
-//       authorization: token,
-//     },
-//   })
-//   .then((res) => res.json())
-//   .then((data) => {
-//     var code = data.code; 
-//   });
-
-// fetch(dataUrls.changeCode, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//       authorization: token,
-//     },
-//     body: JSON.stringify({ code: 1 }),
-//   })
-//   .then((res) => res.json())
-//   .then((data) => {
-//     token = data.token; // Registration Status
-//     localStorage.setItem("jwt", token);
-//   });
 
 let arr=[];
 for(let i=0;i<7;i++)
