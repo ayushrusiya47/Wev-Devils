@@ -49,10 +49,10 @@ let signUpForm = document.querySelector(".form");
 signUpForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const email = document.querySelector("#email").value;
-  const name = document.querySelector("#username").value;
+  const userName = document.querySelector("#username").value;
   const password = document.querySelector("#password").value;
   const confirmPassword = document.querySelector("#confirm-password").value;
-  const userName = document.querySelector().value; // Add the user name identifier in query selector
+  const name = "hello";
   const checkbox = document.querySelector("#check-box").value;
   // console.log(email, name, password);
   if (checkbox === false) {
