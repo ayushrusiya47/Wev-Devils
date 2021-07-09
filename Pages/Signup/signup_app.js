@@ -45,12 +45,14 @@ document.querySelector(".menu").addEventListener("click", () => {
 let signUpForm = document.querySelector(".form");
 signUpForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    
     const email = document.querySelector("#email").value;
     const userName = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
     const confirmPassword = document.querySelector("#confirm-password").value;
     const name = "hello";
     const checkbox = document.querySelector("#check-box").value;
+   
     // console.log(email, name, password);
     if (checkbox === false) {
         alert("please fill the checkbox");
@@ -89,3 +91,4 @@ signUpForm.addEventListener("submit", (event) => {
             console.log(err);
         });
 });
+let t=0;

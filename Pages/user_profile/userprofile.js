@@ -226,14 +226,14 @@ fetch(dataUrls.getCode, {
           },
           body: JSON.stringify({ code: it % 7 }),
         })
-          .then((res) => res.json())
-          .then((data) => {
+          
+          .then(() => {
+          
+            // token = data.token; // Registration Status
+            localStorage.setItem("jwt", token);
             setTimeout(() => {
               location.reload();
-            }, 3000);
-            token = data.token; // Registration Status
-            localStorage.setItem("jwt", token);
-            
+            }, 2000);
             console.log("done");
            
           });
