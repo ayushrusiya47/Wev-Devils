@@ -76,21 +76,3 @@ event4.addEventListener("click" , ()=>{
     });
 
 })
-event5.addEventListener("click" , ()=>{
-    fetch("https://web-devil.herokuapp.com/admin/eventOpen" ,{
-        method: "put",
-        headers: {
-            "Authorization":localStorage.getItem("jwt"),
-            "content-type":"application/json"
-        } ,
-        body: JSON.stringify({ "event":"e5" })
-    }).then((res)=>{
-        if(res.status===204){
-            alert("successfully opened event 5");
-        }
-        else{
-            alert("facing error ");
-        }
-    });
-
-})
