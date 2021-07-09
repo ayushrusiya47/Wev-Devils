@@ -32,7 +32,29 @@ body {
   background: url("https://media1.popsugar-assets.com/files/thumbor/LGrCTpGbDAJikZOU9K3BuCnHmb4/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/04/24/742/n/1922398/150fb890_y0VW29.gif");
   border-radius: 10px;
 }
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
 
+@keyframes spin {
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 a {
   font-family: "Dosis", cursive;
   font-size: 1em;
