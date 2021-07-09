@@ -15,6 +15,14 @@
   ::-webkit-scrollbar-thumb {
     background: #FF0000;
   }
+  @keyframes show {
+    from {
+      transform: translateX(-1000px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 html { 
     background: url("../../../public/admin_related_images/admin\ bg1.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -76,7 +84,22 @@ h3 {
     line-height: 80px;
     background: linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
     margin: 50px;
+    margin-left: 100px;
+    transform: translateX(-1000px);
+    animation: show 2s ease forwards;
 }
+.s1 {
+    animation-delay: 100ms;
+  }
+  .s2 {
+    animation-delay: 400ms;
+  }
+  .s3 {
+    animation-delay: 800ms;
+  }
+  .s4 {
+    animation-delay: 1500ms;
+  }
 .s1:hover , .s2:hover , .s3:hover, .s4:hover , .s5:hover{
     cursor: pointer;
 }
@@ -86,11 +109,12 @@ h3 {
 
 }
 .textdesign{
-    font-size: 35px;
+    font-size: 55px;
     margin-left: 45px;
     background: -webkit-linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-bottom: 100px;
 }
 @media (max-width:1050px){
     .s1 , .s2 , .s3 , .s4 ,.s5{
