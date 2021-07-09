@@ -22,27 +22,31 @@ This project is made to handle the Fest event of a college
 ![](https://i.ibb.co/GJ2vGT0/Screenshot-458.png)
 ## screenshot for responsive design
 ## landing Page
-![](https://ibb.co/D91TSVW)
+![](https://i.ibb.co/6HyLfnw/Screenshot-2021-07-09-23-31-43-67.jpg)
 ## Signin
-![](https://ibb.co/4Rsg80m)
+![](https://i.ibb.co/3mfYpPr/Screenshot-2021-07-09-23-34-08-87.jpg)
 ## SignUp
-![](https://ibb.co/sqnxFLP)
+![](https://i.ibb.co/yqtv8LR/Screenshot-2021-07-09-23-33-21-42.jpg)
 ## Events
-![](https://ibb.co/C2w7g2W)
+![](https://i.ibb.co/Sr6nbrJ/Screenshot-2021-07-09-234455.png)
 ## Profile page
-![](https://ibb.co/4Kw3fYx)
+![](https://i.ibb.co/7jxLzRF/Screenshot-2021-07-09-234616.png)
 ## Admin Panel
-![](https://ibb.co/Xszcqbz)
+![](https://i.ibb.co/Ph5qdN5/admin-panel.png)
 
 
 # Hosted URL
-
-----If Hosted----
+This site is hosted at Netlify
+https://prospero.netlify.app/
+## Test user
+Username- Testuser
+Email- user@gmail.com
+password- webkritipasskey
 
 # Features Implemented
 - In this Fest website we have add sign in/ sign up for user;
 - we have also added discord chat widget which is connected to main events discord server
-- 
+
 ## Frontend
 ### In front end We have used::
 - AOS library
@@ -160,6 +164,6 @@ Shikhar Gupta (2020IMT-090)
 ----Name & Roll Number----
 ## Note
 The reset password feature is underdevelopment it is not fully functional now
-
+Few Commits have been made in readme due cdn error
 =======
 >>>>>>> 010a2acca8d9d695ebc38c8135fd5262911fd4ae
