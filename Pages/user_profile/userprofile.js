@@ -1,8 +1,8 @@
 "use strict";
 let token = localStorage.getItem("jwt");
-// if (!token) {
-//   location.href = "../../index.html";
-// }
+if (!token) {
+  location.href = "../../index.html";
+}
 //information of events
 const info = [
   "The Owl City",
