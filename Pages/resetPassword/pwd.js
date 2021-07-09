@@ -16,3 +16,6 @@ else{
     }
 }
 });
+document.querySelector('.has').addEventListener('click',()=>{
+location.href='./../../Pages/SignIn/signIn.html';
+})

@@ -111,10 +111,11 @@ sign_inbtn.addEventListener("click", function() {
 const user = document.querySelector(".user-profile");
  
 document.querySelector(".Admin").addEventListener('click',()=>{
-    location.href='./Pages/admin/index.html';
+    location.href='./Pages/admin/admin log in/index.html';
 })
 document.querySelector(".Admin-panel").addEventListener('click',()=>{
-    location.href='./Pages/admin/index.html';
+    location.href='./Pages/admin/admin log in/index.html';
+     
    
 });
 

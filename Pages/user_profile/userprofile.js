@@ -1,8 +1,17 @@
 "use strict";
 let token = localStorage.getItem("jwt");
-if (!token) {
-  location.href = "../../index.html";
-}
+// if (!token) {
+//   location.href = "../../index.html";
+// }
+//information of events
+const info = [
+  "The Owl City",
+  "Graphic Design contest",
+  "Photoediting",
+  "PhotoGraphy",
+];
+
+//information of events
 const body = document.querySelector("body");
 const html = document.querySelector("html");
 console.log(body);
@@ -73,25 +82,38 @@ window.addEventListener("load", async () => {
       events.push(i + 1);
     }
   }
+  console.log(events);
   console.log(img);
   let ptr = 0;
-  card.addEventListener("mouseenter", () => {
-    card.classList.add("pause");
-    document.querySelector(".title").display='block';
-    document.querySelector(".time").display='block';
-    document.querySelector(".organizers").display='block';
 
-  });
-  card.addEventListener("mouseleave", () => {
-    card.classList.remove("pause");
-    document.querySelector(".title").display='none';
-    document.querySelector(".time").display='none';
-    document.querySelector(".organizers").display='none';
-  });
   if (img.length > 0) {
+    if (ptr >= img.length) {
+      ptr = 0;
+    }
+    card.addEventListener("mouseenter", () => {
+      card.classList.add("pause");
+
+      document.querySelector(".title").style.display = "block";
+   
+      document.querySelector(".time").style.display = "block";
+      document.querySelector(".organizers").style.display = "block";
+    });
+  
+    card.addEventListener("mouseleave", () => {
+      card.classList.remove("pause");
+      document.querySelector(".title").style.display = "none";
+      document.querySelector(".time").style.display = "none";
+      document.querySelector(".organizers").style.display = "none";
+    });
     document.querySelector(".unregister").style.display = "block";
     setInterval(() => {
-      document.querySelector(".unregister").addEventListener("click", () => {
+  if(!card.classList.contains("pause"))  {  document.querySelector(".heading").innerHTML = info[events[ptr] - 1];
+      console.log(info[events[ptr] - 1]);
+      let changer=events[ptr];
+      console.log(changer,"changer");
+      document.querySelector(".unregister").addEventListener("click", (e) => {
+        e.stopImmediatePropagation();
+        console.log('click'); 
         fetch(dataUrls.unregister, {
           //Swap register with unregister for unregistering
           method: "PUT",
@@ -100,12 +122,20 @@ window.addEventListener("load", async () => {
             authorization: token,
           },
           body: JSON.stringify({
-            event: `e${events[ptr % events.length]}`,
+            event: `e${changer}`,
           }), //Swap e1 with e2,e3,e4 or e5 for registering/unregistering them
         });
-      });
+        setTimeout(()=>{location.reload()},2000);
+      }
+      );}
+
       if (!card.classList.contains("pause")) {
-        card.style.backgroundImage = `url("${img[ptr++ % img.length]}")`;
+        console.log('ptr',ptr);
+        card.style.backgroundImage = `url("${img[ptr]}")`;
+      }
+      ptr++;
+      if (ptr >= img.length) {
+        ptr = 0;
       }
     }, 3500);
   } else {
@@ -138,12 +168,9 @@ let n;
 let email;
 document.querySelector(".edit").addEventListener("click", () => {
   document.querySelector(".edit-image").style.display = "block";
-  html.style.overflow = "hidden";
 });
 document.querySelector(".close").addEventListener("click", () => {
   document.querySelector(".edit-image").style.display = "none";
-  html.style.overflow = "visible";
-  html.style.overflowX = "hidden";
 });
 fetch(dataUrls.getCode, {
   method: "GET",
@@ -192,10 +219,14 @@ fetch(dataUrls.getCode, {
         })
           .then((res) => res.json())
           .then((data) => {
+            setTimeout(() => {
+              location.reload();
+            }, 3000);
             token = data.token; // Registration Status
             localStorage.setItem("jwt", token);
+            
             console.log("done");
-            setTimeout(location.reload(), 2000);
+           
           });
       }
     });

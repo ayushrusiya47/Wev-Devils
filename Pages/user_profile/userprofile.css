@@ -425,10 +425,13 @@ body {
  font-weight: 500;
 font-family:'Dosis',cursive;
 letter-spacing: 2px;
+margin-left: 1em;
+
 }
 .time{
   display:none;
   margin-top:4em;
+  margin-left: 1em;
   width:100%;
 color:white;
 font-size: 1.7em;
@@ -443,6 +446,8 @@ letter-spacing: 2px;
   font-weight: 500;
 font-family:'Dosis',cursive;
 letter-spacing: 2px;
+margin-left: 1em;
+
 
 }
 .organizers h1{
@@ -554,28 +559,33 @@ letter-spacing: 2px;
     position:fixed;
   z-index: 10000;
  width:100%;
- min-height: 100vh;
- background-color: #0506f6;
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
-     
-  
+ height: 100vh;
+  background-color: #0506f6;
+top: 0;
+bottom:0;
+left: 0;
+right:0;
 }
 .close{
     position: absolute;
     top: 5%;right:5%;
+    cursor: pointer;
+}
+.close svg:hover{
+fill:darkorange
 }
 .box {
  
 width:100%;
+top:0;
+left: 0;
 height: 100vh;
- overflow: hidden;
 display:flex;
 justify-content: center;
 align-items: center;
 }
 .selection-card {
+ 
   width: 20em;
   height: 30em;
   background-color: white;

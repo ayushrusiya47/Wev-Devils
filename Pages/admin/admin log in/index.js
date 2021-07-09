@@ -44,7 +44,7 @@ signIn.addEventListener("submit", (event) => {
                     
                     location.href = "../index.html";
                 } else {
-                    alert("try with a diiferent password or email");
+                    alert("try with a diferent password or email");
                 }
             })
     }
