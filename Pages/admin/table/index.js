@@ -9,6 +9,14 @@
 
 
 var tab = document.getElementById("myTable")
+function check(data2){
+    if(data2===true){
+        return "Registered";
+    }
+    else{
+        return "Not Registered";
+    }
+}
 function build(data) {
 
     for (var i = 0; i < data.length; i++) {
@@ -17,11 +25,11 @@ function build(data) {
                 <td> ${i+1}</td>
                 <td> ${data[i].username}</>
                 <td> ${data[i].email}</td>
-                <td> ${data[i].e1}</td>
-                <td> ${data[i].e2}</td>
-                <td> ${data[i].e3}</td>
-                <td> ${data[i].e4}</td>
-                <td> ${data[i].e5}</td>
+                <td> ${check(data[i].e1)}</td>
+                <td> ${check(data[i].e2)}</td>
+                <td> ${check(data[i].e3)}</td>
+                <td> ${check(data[i].e4)}</td>
+                <td> ${check(data[i].e5)}</td>
 
             </tr>`
         tab.innerHTML += row;
