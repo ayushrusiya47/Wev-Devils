@@ -37,4 +37,3 @@ fetch('https://web-devil.herokuapp.com/admin/getList', {
     build(data);
 
 })
-console.log(localStorage.getItem("jwt"));
