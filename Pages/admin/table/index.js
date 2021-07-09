@@ -6,7 +6,11 @@
 // { 'name': 'sanket', 'email': 'sanket@gmail.com', 'status_E1': 'registered', 'status_E2': 'registered', 'status_E3': 'registered', 'status_E4': 'registered', 'status_E5': 'registered' },
 // { 'name': 'sanket', 'email': 'sanket@gmail.com', 'status_E1': 'registered', 'status_E2': 'registered', 'status_E3': 'registered', 'status_E4': 'registered', 'status_E5': 'registered' }
 // ]
-
+window.addEventListener(("load") , ()=>{
+    if(localStorage.getItem("jwt").length === 0 ||  window.localStorage.length===0){
+        location.href="../../../index.html";
+    }
+})
 
 var tab = document.getElementById("myTable")
 function check(data2){
