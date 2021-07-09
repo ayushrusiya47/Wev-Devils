@@ -378,7 +378,13 @@ ul {
     border-radius: 13px;
     cursor: pointer;
 }
-
+.show{
+    align-self: flex-start;
+    margin-bottom: 1em;
+    color: white;
+    font-family: 'Dosis',cursive;
+    letter-spacing: 2px;
+}
 @keyframes polygons {
     25% {
         clip-path: polygon(20% 0%, 100% 38%, 70% 90%, 0% 100%);

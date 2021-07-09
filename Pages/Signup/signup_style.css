@@ -127,6 +127,13 @@ ul{
     animation: restore 2s cubic-bezier(.7,.34,1,.55) forwards;
     animation-delay:3s ;
 }
+.show{
+    align-self: center;
+    margin-bottom: 1em;
+    color: white;
+    font-family: 'Dosis',cursive;
+    letter-spacing: 2px;
+}
 @keyframes restore {
     from{
         opacity: 0;

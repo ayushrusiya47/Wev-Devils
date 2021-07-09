@@ -26,7 +26,19 @@ document.querySelector(".signup").addEventListener("click", () => {
     location.href = "./../../Pages/Signup/signup.html";
 });
 
-
+let check=document.querySelector('#showpassword');
+check.addEventListener('click',()=>{
+    console.log(check.checked);
+   if(check.checked==true)
+   {
+       document.querySelector('#password').setAttribute('type','text');
+ 
+   }
+   else{
+    document.querySelector('#password').setAttribute('type','password');
+     
+   }
+})
 document.querySelector(".events").addEventListener("click", () => {
     location.href = "./../../Pages/Events/events.html";
 });

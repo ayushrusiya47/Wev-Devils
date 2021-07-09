@@ -5,10 +5,12 @@ check.addEventListener('click',()=>{
    if(check.checked==true)
    {
        document.querySelector('#newpassword').setAttribute('type','text');
+       document.querySelector('#oldpassword').setAttribute('type','text');
        document.querySelector('#confirmpassword').setAttribute('type','text');
    }
    else{
     document.querySelector('#newpassword').setAttribute('type','password');
+    document.querySelector('#oldpassword').setAttribute('type','password');
     document.querySelector('#confirmpassword').setAttribute('type','password');
    }
 })

@@ -40,7 +40,21 @@ document.querySelector(".dropdown").addEventListener("click", () => {
 document.querySelector(".menu").addEventListener("click", () => {
     document.querySelector(".overlay").style.display = "none";
 });
-
+let check=document.querySelector('#showpassword');
+check.addEventListener('click',()=>{
+    console.log(check.checked);
+   if(check.checked==true)
+   {
+       
+       document.querySelector('#password').setAttribute('type','text');
+       document.querySelector('#confirm-password').setAttribute('type','text');
+   }
+   else{
+    
+    document.querySelector('#password').setAttribute('type','password');
+    document.querySelector('#confirm-password').setAttribute('type','password');
+   }
+})
 
 let signUpForm = document.querySelector(".form");
 signUpForm.addEventListener("submit", (event) => {
@@ -68,7 +82,7 @@ signUpForm.addEventListener("submit", (event) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                name,
+             
                 email,
                 password,
                 userName

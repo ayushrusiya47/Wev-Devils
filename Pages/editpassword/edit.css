@@ -24,7 +24,7 @@ p{
     margin-bottom:10px;
     margin-left: 10px;
 }
-#newpassword,#confirmpassword{
+#oldpassword,#newpassword,#confirmpassword{
     min-width: 22.7em;
     min-height: 2.5em;
     border-radius: 10px;
