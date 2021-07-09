@@ -39,9 +39,9 @@ This project is made to handle the Fest event of a college
 This site is hosted at Netlify
 https://prospero.netlify.app/
 ## Test user
-Username- Testuser
-Email- user@gmail.com
-password- webkritipasskey
+- Username- Testuser
+- Email- user@gmail.com
+- password- webkritipasskey
 
 # Features Implemented
 - In this Fest website we have add sign in/ sign up for user;
