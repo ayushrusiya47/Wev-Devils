@@ -1,8 +1,8 @@
 "use strict";
 let token = localStorage.getItem("jwt");
-if (!token) {
-  location.href = "../../index.html";
-}
+// if (!token) {
+//   location.href = "../../index.html";
+// }
 //information of events
 const info = [
   "The Owl City",
@@ -172,6 +172,13 @@ document.querySelector(".dropdown").addEventListener("click", () => {
 document.querySelector(".menu").addEventListener("click", () => {
   document.querySelector(".overlay").style.display = "none";
 });
+document.querySelector('.changepwd').addEventListener('click',()=>{
+  location.href='./../../Pages/editpassword/edit.html';
+
+})
+document.querySelector('.change').addEventListener('click',()=>{
+  location.href='./../../Pages/editpassword/edit.html';
+})
 let code;
 let n;
 let email;
@@ -226,14 +233,14 @@ fetch(dataUrls.getCode, {
           },
           body: JSON.stringify({ code: it % 7 }),
         })
-          .then((res) => res.json())
-          .then((data) => {
+          
+          .then(() => {
+          
+            // token = data.token; // Registration Status
+            localStorage.setItem("jwt", token);
             setTimeout(() => {
               location.reload();
-            }, 3000);
-            token = data.token; // Registration Status
-            localStorage.setItem("jwt", token);
-            
+            }, 2000);
             console.log("done");
            
           });
@@ -241,17 +248,4 @@ fetch(dataUrls.getCode, {
     });
   });
 
-// AOS.init();
-// fetch(dataUrls.changeCode, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//       authorization: token,
-//     },
-//     body: JSON.stringify({ code: 1 }),
-//   })
-//   .then((res) => res.json())
-//   .then((data) => {
-//     token = data.token; // Registration Status
-//     localStorage.setItem("jwt", token);
-//   });
+
