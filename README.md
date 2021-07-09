@@ -1,20 +1,62 @@
 # Web DEVil
 
-----Project Description----
+This project is made to handle the Fest event of a college
+
 
 # Screenshots
+## home
+![home page](https://i.ibb.co/vks7d1p/Screenshot-451.png)
+## signIn
+![](https://i.ibb.co/VBTYNQn/Screenshot-452.png)
+## Signup
+![](https://i.ibb.co/w0BkYFv/Screenshot-453.png)
+## events
+![](https://i.ibb.co/VQ29x7N/Screenshot-460.png)
+## events
+![](https://i.ibb.co/yWhDp4j/Screenshot-456.png)
+## events
+![](https://i.ibb.co/z7j21HG/Screenshot-455.png)
+## UserProfile
+![](https://i.ibb.co/HqcX2RS/Screenshot-457.png)
+## userprofile cntd
+![](https://i.ibb.co/GJ2vGT0/Screenshot-458.png)
 
-----Screenshots----
 
 # Hosted URL
 
 ----If Hosted----
 
 # Features Implemented
-
+- In this Fest website we have add sign in/ sign up for user;
+- we have also added discord chat widget which is connected to main events discord server
+- 
 ## Frontend
+### In front end We have used::
+- AOS library
+- Vanilla javascript
+- HTML5
+- CSS3
+There is the main index.html basically as home page.
+This page links to sign in / sign up  and Admin pannel log in.
+## Subfolder 
+- ## Pages
+This folder contains all the HTML,CSS  and javascript for the following:
+- Sign in page
+- Sign up page
+- Events Page
+- Admin Page
+- Edit password
+- ## Public
+This folder consists of all the image graphics and svgs' for the project 
+It contains:
+- Avatars- userprofiles images
+- Assests- contains svg, png etc for graphics
+- Logo - contains all Logos and images for the website
+- Event /Event-images - Contains all images required for the event page
 
-----Frontend Features----
+## Security
+- We do not store plain-text passwords anywhere in the code. More over, the password-hash is also not sent to the user when creating his session
+- Input validation is done directly on the front end.
 
 ## Backend
 
@@ -99,6 +141,6 @@ The event table contains boolean columns (e1,e2,e3,e4) for storing the opening s
 # Team Members
 
 Ayush Rusiya (2020IMT-020)
-Sanket Santosh Diwate (2020IMT-???)
-Shikhar Gupta (2020IMT-???)
+Sanket Santosh Diwate (2020IMT-046)
+Shikhar Gupta (2020IMT-090)
 ----Name & Roll Number----
