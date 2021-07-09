@@ -19,3 +19,9 @@ div4.addEventListener("click" ,()=>{
     
     
 } )
+const logout=document.querySelector(".logout");
+logout.addEventListener("click" ,()=>{
+    localStorage.setItem("jwt", "");
+    location.href="./admin log in/index.html"
+    
+})
