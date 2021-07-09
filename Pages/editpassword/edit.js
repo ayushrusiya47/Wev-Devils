@@ -1,5 +1,6 @@
 "use strict"
 let check=document.querySelector('#showpassword');
+const token=localStorage.getItem("jwt");
 check.addEventListener('click',()=>{
     console.log(check.checked);
    if(check.checked==true)
@@ -14,6 +15,9 @@ check.addEventListener('click',()=>{
     document.querySelector('#confirmpassword').setAttribute('type','password');
    }
 })
+const p1=document.querySelector('#newpassword').value;
+const p2=document.querySelector('#confirmpassword').value;
+const p3=document.querySelector('#oldpassword').value;
 function checker(){
     const p1=document.querySelector('#newpassword').value;
     const p2=document.querySelector('#confirmpassword').value;
@@ -37,9 +41,23 @@ document.querySelector('form').addEventListener('submit',(e)=>{
 checker();
 if( document.querySelector('.error').style.display==='none')
 {    //fetch to change password;
-    document.querySelector('form').submit();
+    
     console.log('clicked');
     location.href = "./../../Pages/SignIn/signIn.html";
+    fetch('https://web-devil.herokuapp.com/auth/changePassword'),{
+        method:'POST',
+        headers:{
+            "Content-Type": "application/json",
+            authorization:token
+        },
+        body:JSON.stringify({
+            password:p3,
+            newPassword:p1
+
+        })
+
+    }
+    document.querySelector('form').submit();
 }
 
 })
