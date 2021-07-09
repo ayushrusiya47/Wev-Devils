@@ -144,3 +144,6 @@ Ayush Rusiya (2020IMT-020)
 Sanket Santosh Diwate (2020IMT-046)
 Shikhar Gupta (2020IMT-090)
 ----Name & Roll Number----
+## Note
+The reset password feature is underdevelopment it is not fully functional now
+

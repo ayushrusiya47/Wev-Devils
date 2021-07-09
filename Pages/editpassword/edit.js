@@ -44,7 +44,7 @@ if( document.querySelector('.error').style.display==='none')
     
     console.log('clicked');
     location.href = "./../../Pages/SignIn/signIn.html";
-    fetch('https://web-devil.herokuapp.com/auth/changePassword'),{
+    fetch('https://web-devil.herokuapp.com/auth/changePassword',{
         method:'POST',
         headers:{
             "Content-Type": "application/json",
@@ -57,7 +57,12 @@ if( document.querySelector('.error').style.display==='none')
         })
 
     }
-    document.querySelector('form').submit();
+    )
+    localStorage.setItem("jwt", "");
+    location.reload();
+    // document.querySelector('form').submit();
+    setTimeout(()=>{
+    location.href = "./../../Pages/SignIn/signIn.html";},2000);
 }
 
 })
