@@ -19,9 +19,9 @@ signIn.addEventListener("submit", (event) => {
 
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
-    if (email !== "Admin@techx.com") {
+    if (email !== "Admin@prospero2.0.com") {
         alert("please enter the email provided for admin");
-        res.status(400);
+        
     }
     else {
         fetch('https://web-devil.herokuapp.com/auth/signin', {
