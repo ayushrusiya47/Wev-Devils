@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Dosis",cursive;
+  overflow-x: hidden;
+}
+.container{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    background-color: blueviolet;
+}
+.image{
+    background-image: url("https://cdn.dribbble.com/users/1484654/screenshots/11467054/media/30b17c7a58cf0bd5d64c09d50f535539.jpg?compress=1&resize=1200x900");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:25em;
+    height:18em;
+    border-radius: 10px;
+}
+.heading{
+ font-size: 2em;
+    color:white;
+   
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.description p{
+    font-size: 1.4em;
+    color:white;
+ 
+}
+.links{
+    margin-top: 1em;
+}
+.links p{
+
+   font-size: 1.4em;
+    color:white;
+ 
+}
+a{
+    color: orange;
+}
+@media (max-width:800px){
+    .heading{
+        font-size: 1.5em;
+    }
+    .image{
+        width:20em;
+        height:13em;
+    }
+    p{
+        font-size: 1em;
+        width: 80%;text-align: center;
+    }
+}
