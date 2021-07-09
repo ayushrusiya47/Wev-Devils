@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    overflow-x: hidden;
+}
+.typewriter h3 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end forwards;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+  
+.nav-bar{
+    position: absolute;
+     z-index: 3;
+     width:100%;
+     display: flex;
+     justify-content: flex-end;
+    
+   
+}
+ul{
+    list-style-type:none;
+}
+.list{
+    display:flex;
+    font-size: 20px;
+    font-weight: 900;
+    flex-wrap: wrap;
+  
+}
+.list li{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top:0.8em;
+    padding-bottom: 0;
+  
+}  
+.location{
+   
+    background-color: white;
+    padding: 0.5em 1.2em  0.5em 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition:border-bottom  1s ease ;
+    border-bottom :none;
+
+
+}
+.location:hover{
+
+ background-image:url("https://media0.giphy.com/media/2Et7fcUhkRI7C/giphy.gif?cid=790b76115a679418fa6a47a1b2dea1385b55a32871320bb8&rid=giphy.gif&ct=g");
+  background-size:cover; 
+}
+.wrap{
+    width: 100vw;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    
+}
+.left-container
+{  float: left;
+   
+    width:55vw;
+    background-color: #000000;
+    background: url("../../../public/admin_related_images/waterdrop.png") left center no-repeat;
+   
+    display: flex;
+    flex-direction: column;
+    animation: back 2s forwards;
+    align-items: center;
+    justify-content: flex-start;
+     
+}
+@keyframes back{
+    from{
+        background-position: -1000px;
+        background-color: #000000;
+    }
+    to{
+      
+        background-size: contain;
+        background-color: #000000;
+    }
+}
+.form{
+    padding-top:20px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   
+}
+.logo{
+    cursor: pointer;
+    
+}
+ .instruction hr{
+     margin-top: 10px;
+    margin-left:8% ;
+    width: 80%;
+     margin-bottom:30px ;
+     font-size:1.3em;
+ }
+#email , #password{
+   min-width: 25vw;
+    min-height: 2.5em;
+    border-radius: 10px;
+    border:none;
+    margin-bottom: 18px;
+    color: #000000;
+    outline: none;
+    font-size: 16px;
+    padding-left:15px;
+    
+}
+::placeholder{
+    color:#272626;
+    font-weight: bold;
+    text-align: start;
+}
+#btn{
+    width:160px;
+    height: 45px;
+    background-color:#00FF57;
+    border:none ;
+    border-radius: 55px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bolder;
+  text-align: center;
+
+}
+#btn:hover
+{
+    cursor: pointer;
+  color: #000;
+  background-repeat: repeat-x;
+ 
+  background-position: 100% 50%;
+  transition: background-position 3s ease;
+  background-image: url('https://i.gifer.com/BlKh.gif');
+  color:white;
+  font-weight: 900;
+}
+.rickandmortysvg{
+    width:300px;
+    height: 300px;
+   
+}
+.right-container{
+    float: right;
+    background-color: #00ff6a;
+    width:45vw;
+    background-image:url("../../../public/admin_related_images/hambot.svg") ;
+    background-position:500% 0;
+   object-fit:contain;
+   background-size: cover;
+   background-repeat: no-repeat;
+   animation: size 3s forwards ;
+   animation-delay: 1s;
+   display: grid;
+   place-content: center;
+ 
+}
+ @keyframes size{
+     from {
+         background-position:500% 0;
+        
+     }
+     to{
+        background-position: 40% 0;
+       
+     }
+ }
+ .right-container h1{
+    font-size: 4em;
+    font-weight: 500;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    animation: clipPath 2s ease-in-out ;
+    background-color: #000;
+ 
+   
+ }
+ @keyframes clipPath {
+     from{
+        clip-path: polygon(52% 0, 52% 0, 52% 100%, 52% 100%);
+     }
+     to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+     
+ }
+.has-account{
+   margin-top: 20px;
+    color:white;
+    font-size: 15px;
+    
+
+}
+.has-account{
+    position: relative;
+    padding-bottom: 20px;
+    bottom:0;
+}
+.has-account span a{
+text-decoration: none;
+color:rgb(0, 247, 82);
+}
+
+.overlay{
+    width:100vw;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 100;
+    display:none;
+    -webkit-backdrop-filter: blur(6.3px);
+    backdrop-filter: blur(6.3px);
+    background-color: rgba(0,191,255, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.menu{
+    width:100vw;
+    min-height: 105vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block:hover{
+    background-image: url("https://giphy.com/gifs/no-dripping-2Et7fcUhkRI7C");
+    background-size: contain;
+}
+
+.btnFillup {
+    display: inline-block;
+    padding: 16px;
+    overflow: hidden;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    background-position: 0 -100%;
+    background-repeat: repeat-x;
+    transition: background-position 1.5s ease;
+  }
+  .btnFillup:hover {
+    background-position: 100% 50%;
+    border-color: rgb(0, 0, 0);
+    color: white;
+  }
+  .liquidbg {
+    background-image: url('https://cdn.dribbble.com/users/1463692/screenshots/5486307/drips_v01.gif');
+    background-size: cover;
+  }
+ 
+  .blocks
+  {
+      width:10em;
+      background-color: rgb(0, 0, 0);
+      color:rgb(255, 253, 253);
+      font-size: 1.2em;
+      font-weight: 500;
+      font-family: 'Staatliches', cursive;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 1em;
+      padding:0.5em;
+      border-radius: 13px;
+     cursor: pointer;
+  }
+
+@keyframes polygons {
+    25% {
+      clip-path: polygon(20% 0%, 100% 38%, 70% 90%, 0% 100%);
+    
+    }
+    50% {
+      clip-path: polygon(0 46%, 100% 15%, 55% 74%, 0 100%);
+       
+    }
+    75% {
+      clip-path: polygon(100% 38%, 100% 38%, 66% 100%, 0 53%);
+    
+    }
+  }
+@media (max-width: 800px) {
+     body{
+         overflow-x: hidden;
+     }
+          .wrap {
+            flex-direction: column;
+          }
+          .left-container{
+              width:100vw;
+              min-height: 100vh;
+              background-size: cover;
+              background-color: #000;
+              animation: none;
+          }
+       
+        }

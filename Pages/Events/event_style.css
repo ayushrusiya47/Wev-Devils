@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* animations */
+.gradient-1 {
+    background-image: url("https://cdn.dribbble.com/users/1482796/screenshots/14491784/media/6e1307d84a2ed16d936f863fdb024e68.gif");
+    background-repeat: repeat;
+    background-size: cover;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-2 {
+    background-image: url("https://cdn.dribbble.com/users/756147/screenshots/3401711/liquid_paper_animation.gif");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-3 {
+    background-image: url("https://cdn.dribbble.com/users/1800290/screenshots/6093033/hand_resize.gif");
+    background-size: cover;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-4 {
+    background-image: url("https://i.pinimg.com/originals/26/6b/e8/266be8ffd47b293b5aa0f3d35c19775d.gif");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes backg {
+    from {
+        background-size: 300%;
+    }
+
+    to {
+        background-size: 500%;
+    }
+
+}
+
+/* animations */
+
+.container-2 {
+    position: relative;
+    background-image: url("./../../public/Events/wallpapersden.com_stars-sky-night_2048x2048.jpg");
+    background-size: 50%;
+
+    background-color: rgb(0, 0, 0);
+    /* animation: backg 12s linear infinite alternate; */
+    overflow-x: hidden;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.band-event {
+
+    width: 100%;
+    height: min(50em, 100vh);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px;
+
+}
+
+.image-1 {
+    z-index: 2;
+    min-width: 10em;
+    min-height: 10em;
+    max-width: 40em;
+    max-height: 40em;
+
+}
+
+
+.heading-1 {
+    color: white;
+    z-index: 1000;
+
+    font-size: 5em;
+    letter-spacing: 5px;
+    display: grid;
+    place-content: center;
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.para {
+    color: white;
+    width: 70%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    float: right;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.hero-image {
+    border-radius: 20px;
+}
+
+.event-register {
+    font-family: sans-serif;
+    font-size: 2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-transform: capitalize;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 9;
+    border-width: 5px;
+
+}
+
+.border-gradient-green {
+    border-image-source: linear-gradient(90deg, rgba(51, 255, 161, 0.989233193277311) 26%, rgba(20, 60, 255, 1) 51%, rgba(247, 70, 252, 1) 91%);
+}
+
+.border-gradient-orange {
+    border-image-source: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 59%, rgba(252, 176, 69, 1) 100%);
+    ;
+}
+
+.border-gradient-purple {
+    border-image-source: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    ;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #50E3C2;
+    background-image:
+        radial-gradient(at 47% 33%, hsl(162.00, 77%, 40%) 0, transparent 59%),
+        radial-gradient(at 82% 65%, hsl(198.00, 100%, 50%) 0, transparent 55%);
+    backdrop-filter: blur(16px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+
+}
+
+.text-heading {
+    font-size: 5em;
+    color: rgb(255, 255, 255);
+}
+
+.event-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.card {
+    width: 40em;
+    height: 100%;
+    background-color: black;
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(44, 44, 44, 0.75);
+    border-radius: 12px;
+
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card h2 {
+    margin-left: 15%;
+    padding: 0.3em;
+    font-size: 2em;
+    color: blueviolet;
+}
+
+.card span {
+    color: white;
+    font-size: 1em;
+}
+
+.link {
+    color: rgb(253, 156, 0);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.btn-reg {
+    margin: auto;
+    padding: 10px;
+    background-color: #b49fda;
+    border: none;
+    font-family: 'Dosis', sans-serif;
+    cursor: pointer;
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.btn-reg:hover {
+    background-color: #a97bff;
+}
+
+:root {
+    --size: 1;
+    --background: #000;
+    --color1: #d25778;
+    --color2: #ec585c;
+    --color3: #e7d155;
+    --color4: #56a8c6;
+}
+
+.c-1,
+.c-2,
+.c-3,
+.c-4 {
+    text-decoration: underline;
+    margin-top: 1em;
+    display: none;
+}
+
+.g-1,
+.g-2,
+.g-3,
+.g-4 {
+    display: none;
+    font-family: 'Dosis', cursive;
+    font-size: 1em;
+    color: greenyellow;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.ticket-visual_visual {
+    z-index: 1000000;
+    width: 650px;
+    height: 520px;
+    margin: 100px auto;
+    position: relative;
+    transition: all 300ms cubic-bezier(0.03, 0.98, 0.53, 0.99) 0s;
+    background: linear-gradient(to right,
+            var(--color1),
+            var(--color2),
+            var(--color3),
+            var(--color4));
+    /* mix-blend-mode:darken; */
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.del-1,
+.del-2,
+.del-3 {
+    font-size: 1em;
+    font-family: 'Dosis', cursive;
+    letter-spacing: 2px;
+    color: white;
+    display: none;
+}
+
+.ticket-visual_visual:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color1);
+    z-index: 2;
+}
+
+.ticket-visual_visual:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 130px;
+    right: -30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--color4);
+    z-index: 2;
+}
+
+.ticket-visual-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: var(--background);
+
+    border-radius: 15px;
+}
+
+.ticket-visual-wrapper:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--background);
+    z-index: 3;
+}
+
+.ticket-visual-wrapper:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 130px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--background);
+    z-index: 3;
+}
+
+.left {
+    position: absolute;
+    top: 110px;
+    left: -50px;
+    width: 50px;
+    height: 100px;
+    background: var(--background);
+    z-index: 4;
+}
+
+.right {
+    position: absolute;
+    top: 110px;
+    right: -50px;
+    width: 50px;
+    height: 100px;
+    background: var(--background);
+    z-index: 4;
+}
+
+.ticket-visual_profile {
+    padding: calc(39px * var(--size)) calc(155px * var(--size)) calc(39px * var(--size)) calc(58px * var(--size));
+}
+
+.ticket-profile_text {
+    margin: 0;
+}
+
+.ticket-profile_profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.ticket-event {
+    margin-top: 25px;
+    margin-left: -10px;
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Dosis', cursive;
+}
+
+.ticket-profile_image {
+    width: calc(82px * var(--size));
+    height: calc(82px * var(--size));
+    border-radius: 50%;
+}
+
+.ticket-profile_name {
+    font-size: calc(32px * var(--size));
+    margin: 10px 0 5px 20px;
+    font-weight: 700;
+    color:white;
+}
+
+.ticket-profile_username {
+    margin: 0 0 5px 20px;
+    color: #8a8f98;
+    display: flex;
+}
+
+.ticket-profile_githubIcon img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.ticket-visual_ticket-number-wrapper {
+    position: absolute;
+    right: 35px;
+    bottom: 0;
+}
+
+.ticket-visual_ticket-number {
+    color: white;
+    transform: rotate(90deg) translateY(calc(100px * var(--size)));
+    transform-origin: bottom right;
+    font-size: calc(40px * var(--size));
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 35px;
+    width: calc(520px - 10px);
+    border-bottom: 2px dashed #333;
+}
+
+.final-register {
+    width: 10em;
+    min-height: 3vw;
+    margin-top: 1.2em;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Dosis', cursive;
+    letter-spacing: 2px;
+    background-color: #a97bff;
+    font-size: 1.4em;
+    transition: transform 0.5s ease-in;
+
+}
+
+.final-unregister {
+    display: none;
+    width: 10em;
+    min-height: 3vw;
+    margin-top: 0.5em;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Dosis', cursive;
+    letter-spacing: 2px;
+    background-color: #ff5024;
+    font-size: 1.4em;
+    transition: transform 0.5s ease-in;
+}
+
+.final-unregister:hover {
+    transform: translateY(-5px);
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+.final-register:hover {
+    transform: translateY(-5px);
+    background-color: #57c6e1;
+    cursor: pointer;
+}
+
+#instruction {
+    color: rgb(146, 146, 146);
+
+}
+#btn-1:hover,#btn-2:hover,#btn-3:hover,#btn-4:hover{
+    transition: transform 1s ease;
+    transform: scale(1.1);
+}
+@media (max-width:1200px) {
+    .heading-1 {
+        font-size: 3em;
+        width: 100%;
+        text-align: center;
+
+
+    }
+
+    .text-heading {
+        font-size: 4em;
+        margin-top: 0.5em;
+    }
+
+    .card {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+    }
+
+    .odd {
+        flex-direction: column-reverse;
+    }
+
+    .band-event {
+
+        height: auto;
+        overflow: visible;
+        flex-wrap: wrap;
+    }
+
+    .image-1,
+    .hero-image {
+
+        margin: 0 auto 0 auto;
+        width: 20em;
+        height: 20em;
+        /* height: 40em;
+     width: 25em; */
+    }
+
+    .graphic {
+        height: 30em;
+    }
+
+    .photoediting {
+        height: 25em;
+
+        width: 15em;
+    }
+
+    .hero-image-altered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .photogrpahy {
+        height: 30em;
+        width: 20em;
+    }
+
+    .para {
+        width: 90%;
+    }
+
+    .container-2 {
+        background-size: contain;
+    }
+}
+
+@media(max-width:800px) {
+    #ticket {
+        width: 100%;
+        height: fit-content;
+    }
+
+    /* .overlay{
+   overflow-y: auto;
+   display: grid;
+   place-content: center;
+ } */
+    .final-register {
+        min-height: 10vw;
+    }
+
+    .final-unregister {
+        min-height: 10vw;
+    }
+
+    .ticket-visual_ticket-number-wrapper {
+        bottom: 0px;
+        position: relative;
+        width: 100%;
+        right: 0;
+        border: none;
+        border-top: 2px dashed #333;
+        border-bottom: 0px solid black;
+        display: grid;
+        place-content: center;
+    }
+
+    .ticket-visual_ticket-number {
+        transform-origin: center;
+        padding-bottom: 1em;
+
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,134 @@
+
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Teko', sans-serif;
+    
+}
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+  /* Optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+  }
+html { 
+    background: url("../../../public/admin_related_images/admin\ bg1.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+.containers{
+    display: flex;
+}
+.left{
+    float: right;
+    /* background-color: #000000; */
+    width:50vw;
+    height: 100vh;
+    display: flex;
+     flex-direction: column; 
+     align-items: center;
+    justify-content: flex-start; 
+}
+
+.head{
+    color:linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.text{
+    margin-right: 25px;
+}
+.img{
+    margin-top: 15px;
+}
+h3 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.lll{
+    width:300px;
+    height: 300px;
+}
+.body{
+    
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+.s1 , .s2 , .s3 , .s4 ,.s5{
+    
+    /* text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+       */
+    font-size:2.2rem;
+    height:8.8vh;
+    width: 35vw;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    background: linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    margin: 50px;
+}
+.s1:hover , .s2:hover , .s3:hover, .s4:hover , .s5:hover{
+    cursor: pointer;
+}
+.right{
+    height: 100vh;
+    width: 50vw;
+
+}
+.textdesign{
+    font-size: 35px;
+    margin-left: 45px;
+    background: -webkit-linear-gradient(273.42deg, #0C2EDF 0%, rgba(184, 32, 238, 0.77) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+@media (max-width:1050px){
+    .s1 , .s2 , .s3 , .s4 ,.s5{
+        font-size: 25px;
+        
+    }
+}
+ @media (max-width: 638px) {
+     html{
+         background: black;
+     }
+    body{
+        overflow-x: hidden;
+        
+    }
+          
+         .containers {
+            flex-direction: column;
+             
+             background-size: cover;
+             background-color: #000;
+             animation: none;
+         }
+         .s1 , .s2 , .s3 , .s4 ,.s5{
+             font-size: 25px;
+             margin: 0%;
+             margin-bottom: 20px;
+            width:100vw;
+            min-height: 10vh;
+         }
+         
+      
+       }

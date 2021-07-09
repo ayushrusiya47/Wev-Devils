@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis',cursive;
+    letter-spacing: 2px;
+    overflow-x: hidden;
+    overflow: visible;
+}
+body{
+    background-color: rgb(255, 255, 255);
+ 
+}
+ 
+h1{
+    margin-bottom: 50px;
+}
+p{
+    margin-bottom:10px;
+    margin-left: 10px;
+}
+#newpassword,#confirmpassword{
+    min-width: 22.7em;
+    min-height: 2.5em;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    color: #000000;
+    outline: none;
+    font-size: 16px;
+    padding-left: 15px;
+    border: 1px solid black;
+}
+::placeholder {
+    color: #272626;
+    font-weight: bold;
+    text-align: start;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000000;
+    background-color: aliceblue;
+    width:400px;
+    height:fit-content;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: rgba( 255, 255, 255, 0.35 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.submit{
+    text-align: center;
+}
+.btn{
+    min-width: 20em;
+    min-height: 2.5em;
+  font-size: 18px;
+    border:none ;
+    border-radius: 10px;
+    background-color: rgb(50, 117, 204);
+}
+.btn:hover{
+    background-color: rgb(67, 139, 233);
+  cursor: pointer;
+}
+.has{
+    margin: 1em 0 1em 0;font-size: 1.2em;
+    cursor: pointer;
+}
+.error{
+    width:100%;
+    text-align: center;
+    background-color: rgb(255, 94, 0);margin-bottom: 10px;
+   display: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.show{
+    align-self: flex-start;
+    margin-bottom: 1em;
+}

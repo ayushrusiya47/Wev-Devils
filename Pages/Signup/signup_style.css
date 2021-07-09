@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }    
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+ 
+body{
+    overflow-x: hidden;
+    background-color: #000;
+    cursor: url("data:image/svg+xml,%3Csvg shape-rendering='geometricPrecision' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Cg filter='url(%23filter0_d)'%3E%3Cpath fill='%23666' d='M9.63 6.9a1 1 0 011.27-1.27l11.25 3.75a1 1 0 010 1.9l-4.68 1.56a1 1 0 00-.63.63l-1.56 4.68a1 1 0 01-1.9 0L9.63 6.9z'/%3E%3Cpath stroke='%23fff' stroke-width='1.5' d='M11.13 4.92a1.75 1.75 0 00-2.2 2.21l3.74 11.26a1.75 1.75 0 003.32 0l1.56-4.68a.25.25 0 01.16-.16L22.4 12a1.75 1.75 0 000-3.32L11.13 4.92z'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d' width='32.26' height='32.26' x='.08' y='.08' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0'/%3E%3CfeBlend in2='BackgroundImageFix' mode='normal' result='effect1_dropShadow'/%3E%3CfeBlend in='SourceGraphic' in2='effect1_dropShadow' mode='normal' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 6 2, default;
+
+}
+.nav-bar{
+    position: absolute;
+     z-index: 3;
+     width:100%;
+     display: flex;
+     justify-content: flex-end;
+    
+   
+}
+ul{
+    list-style-type:none;
+}
+.list{
+    display:flex;
+    font-size: 20px;
+    font-weight: 900;
+    flex-wrap: wrap;font-family: 'Dosis', sans-serif;
+  
+}
+.list li{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top:0.8em;
+    padding-bottom: 0;
+  
+}  
+.location{
+   
+    background-color: white;
+    padding: 0.5em 1.2em  0.5em 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    transition:border-bottom  1s ease ;
+    border-bottom :none;
+    font-family: 'Dosis',cursive;
+
+
+}
+.location:hover{
+
+ background-image:url("https://media0.giphy.com/media/2Et7fcUhkRI7C/giphy.gif?cid=790b76115a679418fa6a47a1b2dea1385b55a32871320bb8&rid=giphy.gif&ct=g");
+  background-size:cover; 
+}
+.wrap{
+    width: 100vw;
+    min-height: 100vh; 
+    display: flex;
+    
+}
+.left-container{
+    width:55vw;
+    background-color: black;
+    float: left;
+    background-image: url("https://atik-gohel.github.io/ui-1.atik-gohel.github.io/assets/images/blue.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: bg 3s forwards;
+}
+@keyframes bg{
+    from{ width:100%;
+        background-size: 700%;
+    }
+    to{
+        width:55%;
+        background-size:150%;
+    }
+}
+.form{
+   margin-top:3em ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    cursor: none;
+    
+    animation: restore 2s cubic-bezier(.7,.34,1,.55) forwards;
+    animation-delay:3s ;
+}
+@keyframes restore {
+    from{
+        opacity: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to{ 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        opacity: 1;
+        cursor: pointer;
+
+    }
+}
+
+#email , #password, #confirm-password,#username{
+    min-width: 25vw;
+     min-height: 2.5em;
+     border-radius: 10px;
+     border:none;
+     margin-bottom: 18px;
+     color: #000000;
+     outline: none;
+     font-size: 16px;
+     padding-left:15px;
+     
+ }
+ label{
+    color:white;
+    min-width:4em;
+    text-align: center;
+    padding-bottom: 20px;
+}
+label span a{
+    text-decoration: none;
+    color:rgb(36, 138, 255);
+    font-weight: bold;
+    
+
+}
+ ::placeholder{
+     color:#272626;
+     font-weight: bold;
+     text-align: start;
+ }
+ #btn{
+    width:160px;
+    height: 45px;
+    background-color:#00FF57;
+    border:none ;
+    border-radius: 55px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: bolder;
+  
+ 
+
+}
+#btn:hover
+{
+    cursor: pointer;
+  color: #ffff;
+  background-repeat: repeat-x;
+ 
+  background-position: 100% 50%;
+  transition: background-position 3s ease;
+  background-image: url('https://i.gifer.com/BlKh.gif');
+}
+ 
+.has-account{
+color:white;
+margin-top: 1em;
+margin-bottom: 1em;
+animation: restore 2s forwards;
+    animation-delay:3s ;
+    opacity: 0;
+}
+.has-account span a{
+    text-decoration: none;
+    color:rgb(36, 138, 255);
+    font-weight: bold;
+    
+}
+.rickandmortysvg{
+    width:220px;
+    height: 220px;
+    animation: restore 2s ease-in-out forwards;
+    animation-delay:3s ;
+    opacity: 0;
+    transform: scale(1.2);
+}
+.right-container{
+    width:0;
+    background-color:yellowgreen;
+    float: right;
+    background-image: url("./../../public/assests/Screenshot (442).png");
+    background-size: cover;
+    background-position: right;
+    object-fit:cover;
+    background-position: 60% 10%;
+    animation:exp 3s forwards;
+    animation-delay:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.right-container h1{
+    font-size: 4em;
+    font-weight: 500;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    animation: clipPath 2s ease-in-out forwards ;
+    background-color: #000;
+    animation-delay: 3s;
+    width:45vw;
+    clip-path: polygon(52% 0, 52% 0, 52% 100%, 52% 100%);
+   
+ }
+ @keyframes clipPath {
+     from{
+        clip-path: polygon(52% 0, 52% 0, 52% 100%, 52% 100%);
+     }
+     to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+     }
+     
+ }
+@keyframes exp {
+    from{
+        width:0vw;
+        
+    }
+    to {
+        width:45vw;
+    }
+}
+
+.overlay{
+    width:100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    overflow: hidden;
+    display:none;
+    -webkit-backdrop-filter: blur(6.3px);
+    backdrop-filter: blur(6.3px);
+    background-color: rgba(0,191,255, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.menu{
+    width:100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Dosis',cursive;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.block:hover{
+    background-image: url("https://giphy.com/gifs/no-dripping-2Et7fcUhkRI7C");
+    background-size: contain;
+}
+
+.btnFillup {
+    display: inline-block;
+    padding: 16px;
+    overflow: hidden;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    background-position: 0 -100%;
+    background-repeat: repeat-x;
+    transition: background-position 1.5s ease;font-family: 'Dosis',cursive;
+    text-transform: uppercase;
+  }
+  .btnFillup:hover {
+    background-position: 100% 50%;
+    border-color: rgb(0, 0, 0);
+    color: white;
+  }
+  .liquidbg {
+    background-image: url('https://cdn.dribbble.com/users/1463692/screenshots/5486307/drips_v01.gif');
+    background-size: cover;
+  }
+ 
+  .blocks
+  {
+      width:10em;
+      background-color: rgb(0, 0, 0);
+      color:rgb(255, 253, 253);
+      font-size: 1.2em;
+      font-weight: 500;
+      font-family: 'Dosis', sans-serif;
+      letter-spacing: 5px;
+      text-align: center;
+      margin-bottom: 1em;
+      padding:0.5em;
+      border-radius: 13px;
+     cursor: pointer;
+  }
+
+@media (max-width: 800px) {
+    body{
+        overflow-x: hidden;
+    }
+         .wrap {
+           flex-direction: column;
+         }
+         .left-container{
+             width:100vw;
+             min-height: 100vh;
+             background-size: cover;
+             background-repeat: none;
+             background-position: left;
+             animation: oo 2s forwards;
+         }
+         @keyframes oo {
+             from{
+                 background-size: 800%;
+             }
+             to{
+                 background-size: 150%;
+             }
+         }
+         .left-container{
+             min-height: 100vh;
+         }
+         .right-container{
+             display: none;
+             animation: none;
+         }
+      #username::placeholder{
+          font-size: 14px;
+      }
+      .has-account{
+          width:10em;
+          text-align: center;
+      }
+      .block{
+          display: none;
+      }
+      .blocks{
+          width:28vh;
+      }
+       }

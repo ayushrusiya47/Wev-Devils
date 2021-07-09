@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup_style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="menu">
+            <div class="btnFillup liquidbg homie blocks s-1">Home</div>
+            <div class="btnFillup liquidbg signin blocks s-2">sign in</div>
+            <!-- <div class="btnFillup liquidbg profile blocks s-3">profile</div> -->
+            <div class="btnFillup liquidbg events blocks s-4">events</div>
+        </div>
+    </div>
+    <div class="nav-bar" style="z-index: 100;">
+        <div class="handles">
+            <ul class="list">
+                <li class="block g-1"><a class="home location" href="../../index.html">Home</a></li>
+                <li class="block g-2"><a class="sign-in location" href="#">SignIn</a></li>
+                <!-- <li class=" block g-3"><a class="user-profile location" href="#">Profile</a></li> -->
+                <li class=" block g-4"><a class="event location" href="#">Events</a></li>
+
+                <li class="dropdown">
+                    <img src="./../../public/Logo/list.svg" alt="" class="drop-down" style="cursor: pointer; width:1.6em; height:1.6em;">
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="left-container">
+            <div class="logo  floating ">
+                <img src="./../../public/Logo/Rickandmorty logo.svg" class="rickandmortysvg" alt="">
+            </div>
+            <div>
+                <form method="POST" class="form">
+                    <input required type="email" name="email" id="email" placeholder="Enter Email">
+                    <input minlength="8"  required type="password" name="password" id="password" placeholder="Password">
+                    <input minlength="8"  required type="password" name="confirm-password" id="confirm-password" placeholder="confirm-Password">
+                    <input required  minlength="5" type="text" name="username" id="username" placeholder="What should we call you?">
+                    <label>
+                        <input type="checkbox" id="check-box" name="TandC" value="bool" required>
+                        I agree to the <span><a href="#">Terms and Condition</a></span> of the fest competitions</label>
+                    <button type="submit" id="btn">Sign me Up!</button>
+
+                </form>
+
+            </div>
+            <div class="has-account">
+                Already registered? <span><a class="sign-up-has-account" href="#">SignIn </a></span>here
+            </div>
+        </div>
+        <div class="right-container">
+            <h1>Welcome to prospero!</h1>
+        </div>
+    </div>
+    <script src="signup_app.js"></script>
+</body>
+
+</html>

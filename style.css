@@ -1,0 +1,637 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono';
+    color: #FFFFFD;
+}
+
+a {
+    font-family: 'Dosis', cursive;
+    letter-spacing: 2px;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+body,
+html {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    /* "https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif" */
+    background-image: url("https://i.pinimg.com/originals/81/d4/1b/81d41bf148ffe992f03c4e070acdd7ae.gif");
+    /* background-image: url("../New folder/rick-y-morty-fanart-2020-6344.png"); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transition: background-image 1s; */
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    cursor: url("data:image/svg+xml,%3Csvg shape-rendering='geometricPrecision' xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none'%3E%3Cg filter='url(%23filter0_d)'%3E%3Cpath fill='%23666' d='M9.63 6.9a1 1 0 011.27-1.27l11.25 3.75a1 1 0 010 1.9l-4.68 1.56a1 1 0 00-.63.63l-1.56 4.68a1 1 0 01-1.9 0L9.63 6.9z'/%3E%3Cpath stroke='%23fff' stroke-width='1.5' d='M11.13 4.92a1.75 1.75 0 00-2.2 2.21l3.74 11.26a1.75 1.75 0 003.32 0l1.56-4.68a.25.25 0 01.16-.16L22.4 12a1.75 1.75 0 000-3.32L11.13 4.92z'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d' width='32.26' height='32.26' x='.08' y='.08' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='4'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0'/%3E%3CfeBlend in2='BackgroundImageFix' mode='normal' result='effect1_dropShadow'/%3E%3CfeBlend in='SourceGraphic' in2='effect1_dropShadow' mode='normal' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 6 2, default;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url("https://media1.popsugar-assets.com/files/thumbor/LGrCTpGbDAJikZOU9K3BuCnHmb4/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2015/04/24/742/n/1922398/150fb890_y0VW29.gif");
+    border-radius: 10px;
+}
+
+span {
+    background-color: black;
+    font-size: 1em;
+    font-weight: 300;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+
+}
+
+.location {
+
+    background-color: black;
+    padding: 0.5em 1.2em 0.5em 1.2em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: border-bottom 1s ease;
+    border-bottom: none;
+
+
+}
+
+.nav-bar {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+.list {
+    display: flex;
+    font-size: 20px;
+    font-weight: 900;
+    flex-wrap: wrap;
+    font-family: 'Dosis', sans-serif;
+
+}
+
+.list li {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0.8em;
+    padding-bottom: 0;
+
+}
+
+.location:hover {
+    background-color: blueviolet;
+    transform: translateY(5px);
+
+}
+
+.main-page {
+
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    min-height: 105vh;
+    opacity: 0;
+    background-attachment: fixed;
+    background-image: url("https://cdn.dribbble.com/users/1516344/screenshots/6617658/17_liquidbackgrounds_2_1600x1200_1_4x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background: -webkit-linear-gradient(rgba(127, 127, 127, 0),
+  rgba(0, 0, 0, 0) 95%,
+  rgba(0, 0, 0, 1)); */
+    display: flex;
+    justify-content: center;
+
+    animation: reveal 3s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes reveal {
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+.drop-down {
+    width: 40px;
+    height: 40px;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heading {
+
+    position: relative;
+    margin-top: 10%;
+    z-index: 3;
+    width: 50vw;
+    font-size: 4em;
+    font-weight: 300;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 5px;
+    clip-path: polygon(0 100%, 0 0, 26% 100%, 0 0);
+    animation: path 1s ease-in forwards;
+    animation-delay: 4s;
+}
+
+@keyframes path {
+    from {
+        clip-path: polygon(0 100%, 0 0, 26% 100%, 0 0);
+    }
+
+    to {
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+
+}
+
+.date {
+    padding: 5vh;
+}
+
+.logo {
+    position: relative;
+
+    width: 450px;
+    height: 450px;
+
+}
+
+.rickmortysvg {
+    position: absolute;
+    margin-top: 0;
+    width: 30em;
+    height: 30em;
+    transform: scale(0);
+    z-index: 2;
+    animation: pop 3s forwards;
+    animation-delay: 4s;
+    clip-path: polygon(39% 34%, 100% 0, 61% 54%, 0% 100%);
+
+}
+
+@keyframes pop {
+    from {
+        clip-path: polygon(39% 34%, 100% 0, 61% 54%, 0% 100%);
+
+        transform: rotateX(-30deg) scale(0);
+    }
+
+    to {
+        transform: rotateX(0) scale(1.4);
+        clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    }
+}
+
+.date h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    width: fit-content;
+
+}
+
+.btn-events {
+    background-color: black;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 40px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-events:hover {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
+footer {
+    padding-top: 5em;
+    background-color: #000;
+    position: relative;
+    z-index: 11;
+    /* padding-bottom:20em; */
+
+}
+
+.school {
+    background-image: url("https://www.noticebard.com/wp-content/uploads/2019/10/iitm-gwalior.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 15em;
+    min-height: 15em;
+}
+
+.footer {
+    position: relative;
+    left: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.team {
+    left: 2em;
+    position: relative;
+    top: 1em;
+    display: flex;
+    padding-bottom: 1.5em;
+}
+
+.team img {
+    margin-left: 10px;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+
+.team div {
+    margin-left: 3em;
+}
+
+
+
+.about {
+    margin-top: 1em;
+}
+
+.about h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.about p {
+    width: 25em;
+}
+
+.team img:hover {
+    border: solid 6px rgb(1, 255, 242);
+
+}
+
+.team img:hover:nth-child(1) {
+    border: solid 6px #39FF14;
+}
+
+.team img:hover:nth-child(3) {
+    border: solid 6px #FFD300;
+}
+
+.contact {
+    margin-top: 1em;
+
+}
+
+.contact li {
+    line-height: 1.5em;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.copyrights h3 {
+    margin-top: 3em;
+    text-align: center;
+    color: grey;
+    padding-bottom: 1em;
+}
+
+.social {
+    margin-top: 1em;
+}
+
+.social ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.social ul li {
+    margin-left: 1em;
+    margin-right: 0.5em;
+    padding: 10px;
+}
+
+.social ul li svg {
+    width: 2em;
+    height: 2em;
+}
+
+.list1 svg:hover {
+    transform: scale(1.2);
+    fill: #0407c3;
+}
+
+.list2 svg:hover {
+    transform: scale(1.2);
+    fill: #27cfec;
+}
+
+.list3 svg:hover {
+    transform: scale(1.2);
+    fill: #ff0101;
+}
+
+.list4 svg:hover {
+    transform: scale(1.2);
+    fill: #00a2ff;
+}
+
+.list5 svg:hover {
+    transform: scale(1.2);
+    fill: #ff5c1c;
+}
+
+.list6 svg:hover {
+    transform: scale(1.2);
+    fill: #3b58ff;
+}
+
+.sponsors {
+    padding-top: 2em;
+}
+
+.sponsors ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sponsors h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.sponsors ul li img {
+    width: 30em;
+    height: 10em;
+    padding-left: 1em;
+    padding-right: 0.5em;
+
+}
+
+.sponsors ul li hr {
+    opacity: 0;
+
+}
+
+.sponsors ul li img:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 0.5em;
+    transform: translateY(-0.1em);
+    transition: transform 0.5s ease;
+    animation-name: floating;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.join-discord {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.join-discord img {
+    margin-top: 1em;
+    max-width: 14em;
+    max-height: 7em;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100%;
+    min-height: 105vh;
+
+    display: none;
+    position: fixed;
+    z-index: 1000;
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-image: linear-gradient(155deg, rgba(255, 255, 255, 0.37), rgba(255, 255, 255, 0));
+    border-radius: 7px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    backdrop-filter: blur(6.2px);
+    -webkit-backdrop-filter: blur(6.2px);
+    border-top: 0.2px solid rgba(255, 255, 255, 0.71);
+    border-left: 0.2px solid rgba(255, 255, 255, 0.71);
+}
+
+.menu {
+    width: 100%;
+    min-height: 105vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu div {
+    text-align: center;
+    width: 20em;
+    background-color: #000;
+    margin-bottom: 1em;
+    padding: 0.5em 1.2em 0.5em 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.d-1 {
+    font-size: 2em;
+    font-weight: 500;
+
+    font-family: 'Dosis', cursive;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 800px) {
+    .main-page {
+        background-attachment: scroll;
+
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .adjust {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading {
+        position: relative;
+        font-size: 2.7em;
+        margin-top: 0%;
+
+        width: 7em;
+        z-index: 10;
+        align-self: center;
+        text-align: center;
+    }
+
+    .date {
+        width: 100%;
+        font-size: 0.7em;
+        text-align: center;
+    }
+
+    .date h2 {
+        width: 20em;
+    }
+
+    .logo {
+        position: relative;
+        width: 25em;
+        height: 25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rickmortysvg {
+        position: absolute;
+        width: 25em;
+        height: 25em;
+        transform: scale(0);
+        z-index: 2;
+        animation: pop 1s forwards;
+        animation-delay: 3s;
+    }
+
+    @keyframes pop {
+        from {
+            clip-path: polygon(39% 34%, 100% 0, 61% 54%, 0% 100%);
+
+            transform: rotateX(-30deg) scale(0);
+        }
+
+        to {
+            transform: rotateX(0) scale(1.2);
+            clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+        }
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block {
+        display: none;
+    }
+
+    .about p {
+        text-align: center;
+        font-size: 15px;
+        width: 20em;
+    }
+
+    .copyrights h3 {
+        font-size: 12px;
+    }
+
+    .footer {
+        left: 0;
+
+    }
+
+    .sponsors h1 {
+        font-size: 2em;
+    }
+
+    .sponsors ul li img {
+        width: 15em;
+        height: 5em;
+        padding-left: 1em;
+        padding-right: 0.5em;
+
+    }
+}

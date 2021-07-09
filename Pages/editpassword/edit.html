@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="heading">
+            <h1>Enter your Email</h1>
+        </div>
+       <p> Enter your new Password and we will reset your password.</p>
+       <form action="" >
+        <input minlength="8" type="password" name="newpassword" id="newpassword" placeholder="New Password">
+        <input minlength="8" type="password" onkeyup="checker()" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+        <div class='show'><input type="checkbox" id='showpassword'> Show Passwords</div>
+       <div class="error">Passwords do not match</div>
+       <div class='submit'><button type="submit" class='btn'>Change my password</button></div>
+   </form>
+   <div class="has">
+       Sign-in?
+   </div>
+       </div>
+       <script src="edit.js"></script>
+</body>
+</html>

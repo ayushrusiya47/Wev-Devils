@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Teko", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+html {
+  background: url("../../public/admin_related_images/admin\ bg1.jpg") no-repeat
+    center center fixed;
+  /* background: url("./open\ \ event/index.html") no-repeat center center fixed;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+/*
+  @keyframes*/
+
+@keyframes show {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.containers {
+  display: flex;
+}
+.left {
+  float: right;
+  /* background-color: #000000; */
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.head {
+  color: linear-gradient(273.42deg, #0c2edf 0%, rgba(184, 32, 238, 0.77) 100%);
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.text {
+  margin-right: 25px;
+}
+.img {
+  margin-top: 15px;
+}
+h3 {
+  font-size: 72px;
+  background: -webkit-linear-gradient(
+    273.42deg,
+    #0c2edf 0%,
+    rgba(184, 32, 238, 0.77) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.body {
+  color: white;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+.s1,
+.s2,
+.s3,
+.s4 {
+  font-size: 40px;
+  height: 80px;
+  width: 400px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 80px;
+  background: linear-gradient(
+    273.42deg,
+    #0c2edf 0%,
+    rgba(184, 32, 238, 0.77) 100%
+  );
+  margin: 50px;
+  transform: translateX(-1000px);
+  animation: show 2s ease forwards;
+}
+.s1:hover,
+.s2:hover,
+.s3:hover,
+.s4:hover {
+  cursor: pointer;
+}
+.s1 {
+  animation-delay: 100ms;
+}
+.s2 {
+  animation-delay: 400ms;
+}
+.s3 {
+  animation-delay: 800ms;
+}
+.s4 {
+  animation-delay: 1500ms;
+}
+.right {
+  height: 100vh;
+  width: 50vw;
+}
+@media (max-width: 1050px) {
+  .s1,
+  .s2,
+  .s3,
+  .s4,
+  .s5 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 638px) {
+  html {
+    background-color: black;
+  }
+  .body {
+    overflow-x: hidden;
+    margin-top: 8vh;
+    margin-bottom: 0%;
+    padding: 0%;
+  }
+  .text {
+    font-size: 30px;
+  }
+
+  .containers {
+    background-size: cover;
+
+    animation: none;
+  }
+  .right {
+    display: none;
+  }
+  .left {
+    width: 600px;
+    margin-left: 0%;
+  }
+  .s1,
+  .s2,
+  .s3,
+  .s4,
+  .s5 {
+    font-size: 25px;
+    margin: 0%;
+    margin-bottom: 20px;
+    width: 100vw;
+    min-height: 10vh;
+  }
+  .head {
+    height: 10vh;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  .text {
+    margin-left: 100px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
