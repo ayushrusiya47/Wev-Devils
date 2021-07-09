@@ -20,6 +20,19 @@ This project is made to handle the Fest event of a college
 ![](https://i.ibb.co/HqcX2RS/Screenshot-457.png)
 ## userprofile cntd
 ![](https://i.ibb.co/GJ2vGT0/Screenshot-458.png)
+## screenshot for responsive design
+## landing Page
+![](https://ibb.co/D91TSVW)
+## Signin
+![](https://ibb.co/4Rsg80m)
+## SignUp
+![](https://ibb.co/sqnxFLP)
+## Events
+![](https://ibb.co/C2w7g2W)
+## Profile page
+![](https://ibb.co/4Kw3fYx)
+## Admin Panel
+![](https://ibb.co/Xszcqbz)
 
 
 # Hosted URL
@@ -143,4 +156,3 @@ The event table contains boolean columns (e1,e2,e3,e4) for storing the opening s
 Ayush Rusiya (2020IMT-020)
 Sanket Santosh Diwate (2020IMT-046)
 Shikhar Gupta (2020IMT-090)
-----Name & Roll Number----
