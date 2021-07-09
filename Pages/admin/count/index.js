@@ -1,3 +1,8 @@
+window.addEventListener(("load") , ()=>{
+    if(localStorage.getItem("jwt").length === 0 ||  window.localStorage.length===0){
+        location.href="../../../index.html";
+    }
+})
 const ticketElm = document.getElementById('ticket');
 const { x, y, width, height } = ticketElm.getBoundingClientRect();
 const centerPoint = { x: x + width / 2, y: y + height / 2 };

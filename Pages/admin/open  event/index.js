@@ -1,3 +1,8 @@
+window.addEventListener(("load") , ()=>{
+    if(localStorage.getItem("jwt").length === 0 ||  window.localStorage.length===0){
+        location.href="../../../index.html";
+    }
+})
 const event1=document.querySelector(".s1");
 const event2=document.querySelector(".s2");
 const event3=document.querySelector(".s3");
