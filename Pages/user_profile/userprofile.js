@@ -11,6 +11,15 @@ const info = [
   "PhotoGraphy",
 ];
 
+document.onreadystatechange = function() {
+  if (document.readyState !== "complete") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector("#loader").style.visibility = "visible";
+  } else {
+      document.querySelector("#loader").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+  }
+};
 //information of events
 const body = document.querySelector("body");
 const html = document.querySelector("html");

@@ -27,7 +27,29 @@ html,
 body {
     scroll-behavior: smooth;
 }
-
+#loader {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 /* animations */
 .gradient-1 {
     background-image: url("https://cdn.dribbble.com/users/1482796/screenshots/14491784/media/6e1307d84a2ed16d936f863fdb024e68.gif");
