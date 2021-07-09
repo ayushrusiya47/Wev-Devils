@@ -15,7 +15,7 @@ function build(data) {
         var row = `
             <tr>
                 <td> ${i+1}</td>
-                <td> ${data[i].name}</>
+                <td> ${data[i].username}</>
                 <td> ${data[i].email}</td>
                 <td> ${data[i].e1}</td>
                 <td> ${data[i].e2}</td>
